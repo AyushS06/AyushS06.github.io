@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Journey to the Stars</title>
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	<div class="container">
+  		<h1>Journey to the Stars</h1>
+  	  <a class="btn" href="#">Let's Go!</a>
+  	</div>
+  </body>
+</html>
