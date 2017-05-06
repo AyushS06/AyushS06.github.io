@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #93B874;
+}
+h1 {
+    background-color: orange;
+}
+p {
+    background-color: rgb(255,0,0);
+}
+</style>
+</head>
+<body>
+<h1>This header will have an orange background</h1>
+<p>This paragraph will have a red background</p>
+</body>
+</html>
