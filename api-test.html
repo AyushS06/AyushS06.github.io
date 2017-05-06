@@ -7,7 +7,7 @@
  	<script>
 		angular.module('demo', [])
                     .controller('Hello', function($scope, $http) {
-                        $http.get('http://rest-service.guides.spring.io/greeting').
+                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
                         then(function(response) {
                        $scope.greeting = response.data;
         	});
@@ -17,8 +17,8 @@
 
 	<body>
 		<div ng-controller="Hello">
-			<p>The ID is {{greeting.id}}</p>
-			<p>The content is {{greeting.content}}</p>
+			<p>The ID is {{greeting.date}}</p>
+			<p>The content is {{greeting.explanation}}</p>
 		</div>
 	</body>
 </html>
