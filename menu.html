@@ -52,6 +52,13 @@
                            </md-menu-item> 
                         </md-menu-content>
                      </md-menu>
+	            <md-menu>
+                        <button ng-click="$mdOpenMenu()">Present</button>
+                        <md-menu-content>
+                           <md-menu-item>
+                              <md-button ng-click="ctrl.sampleAction('share', $event)">Share...</md-button>
+                           </md-menu-item> 
+		     </md-menu>
                   </md-menu-bar>
                </div>
             </div>
