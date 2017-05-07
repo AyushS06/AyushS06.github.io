@@ -4,27 +4,21 @@
 <style>
  
 body {
-    -webkit-animation: colorchange 60s infinite; 
-    animation: colorchange 60s infinite;
+    -webkit-animation: imagechange 60s infinite; 
+    animation: imagechange 60s infinite;
 }
  
  
-@-webkit-keyframes colorchange {
+@-webkit-keyframes imagechange {
  
-     0%  {background: #33FFF3;}
-    25%  {background: #78281F;}
-    50%  {background: #117A65;}
-    75%  {background: #DC7633;}
-    100% {background: #9B59B6;}
+    25%  {background-image: url("https://airbusdefenceandspace.com/wp-content/uploads/2016/09/earth-view-from-satellite-space-systems-cover.jpg);}
+    25%  {background-image: url("https://static.pexels.com/photos/26171/pexels-photo.jpg0;}
 }
  
  
-@keyframes colorchange {
-     0%  {background: #33FFF3;}
-    25%  {background: #78281F;}
-    50%  {background: #117A65;}
-    75%  {background: #DC7633;}
-    100% {background: #9B59B6;}
+@keyframes imagechange {
+    25%  {background-image: url("https://airbusdefenceandspace.com/wp-content/uploads/2016/09/earth-view-from-satellite-space-systems-cover.jpg);}
+    25%  {background-image: url("https://static.pexels.com/photos/26171/pexels-photo.jpg0;}
 }   
  
 </style>
