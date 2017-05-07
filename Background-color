@@ -2,19 +2,33 @@
 <html>
 <head>
 <style>
+ 
 body {
-    background-color: #93B874;
+    -webkit-animation: colorchange 60s infinite; 
+    animation: colorchange 60s infinite;
 }
-h1 {
-    background-color: orange;
+ 
+ 
+@-webkit-keyframes colorchange {
+ 
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
 }
-p {
-    background-color: rgb(255,0,0);
-}
+ 
+ 
+@keyframes colorchange {
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}   
+ 
 </style>
 </head>
 <body>
-<h1>This header will have an orange background</h1>
-<p>This paragraph will have a red background</p>
 </body>
 </html>
