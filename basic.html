@@ -13,5 +13,14 @@
             <input type="text" ng-model = "Username"></p>
             <p ng-bind="Username"></p>
          </div>
+       <div ng-app=""  ng-init = "ColorName = ['Pink', 'Red', 'Green', 'Blue', 'Black', 'White', 'Yellow', 'Gray']">
+         <p style="color:green; font-weight:bold">Colours Name:</p>
+         <ol>
+           <li ng-repeat="x in ColorName">
+           <p ng-bind="x"></p>     
+           </li>
+         </ol>
+        </div>
+       
      </body>
 </html>
