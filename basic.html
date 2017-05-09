@@ -11,7 +11,8 @@
            <div ng-app="" ng-init="Username= 'Andy Smith'">
             <p>User Name: <br>
             <input type="text" ng-model = "Username"></p>
-            <p ng-bind="Username"></p>
+             <p style="color:red" ng-bind="Username | uppercase"></p>
+            <!-- <p ng-bind="Username"></p> -->
          </div> 
        <div ng-app="test"  ng-init = "ColorName = ['Pink', 'Red', 'Green', 'Blue', 'Black', 'White', 'Yellow', 'Gray']">
          <p style="color:green; font-weight:bold">Colours Name:</p>
