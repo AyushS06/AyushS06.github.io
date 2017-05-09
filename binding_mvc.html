@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js\angular.min.js"></script>
+</head>
+<body>
+<div ng-app="myFruit" ng-controller="iController">
+<p>Please select your favorite fruit.</p>
+<select ng-model="choosedFruit" ng-options="obj.fruit for obj in fruits" size = "4">
+</select>
+<h3>Your favorite fruit is: {{choosedFruit.fruit}}</h3>
+<h3>The color is: {{choosedFruit.color}}<h3>
+</div>
+<script>
+var app = angular.module('myFruit', [ ]);
+app.controller('iController', function($scope) {
+   $scope.fruits = [
+    {fruit : "Apple", color : "Red"},
+    {fruit : "Orange", color : "Golden"},
+    {fruit : "Banana", color : "Green"}
+];
+});
+</script>
+</body>
+</html>
