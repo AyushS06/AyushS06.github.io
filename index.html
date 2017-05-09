@@ -52,12 +52,6 @@ background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/20
                            <md-menu-item> 
                               <md-menu>
                                  <md-button ng-click="$mdOpenMenu()">Learn</md-button>
-                                 <md-menu-content>
-                                    <md-menu-item><md-button ng-click="ctrl.sampleAction('Interactive Timeline', $event)">Interactive Timeline</md-button></md-menu-item>
-                                    <md-menu-item><md-button ng-click="ctrl.sampleAction('Asteroid Proximity Detector', $event)">Asteroid Proximity Detector</md-button></md-menu-item>
-                                    <md-menu-item><md-button ng-click="ctrl.sampleAction('Mars Rover ', $event)">Mars Rover      </md-button></md-menu-item>
-                                    <md-menu-item><md-button ng-click="ctrl.sampleAction('NASA Photo Database', $event)">NASA Photo Database</md-button></md-menu-item>
-                                    </md-menu-content>
                               </md-menu>
                            </md-menu-item> 
                         </md-menu-content>
@@ -75,6 +69,34 @@ background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/20
                            <md-menu-item>
                               <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go...</md-button>
                            </md-menu-item> 
+		<md-menu-bar>
+                     <md-menu>
+                        <button ng-click="$mdOpenMenu()">Interactive Timeline</button>
+                        <md-menu-content>
+                           <md-menu-item>
+                              <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go!...</md-button>
+                           </md-menu-item>
+				<md-menu-bar>
+                     <md-menu>
+                        <button ng-click="$mdOpenMenu()">Asteroid Proximity Detector(APD)</button>
+                        <md-menu-content>
+                           <md-menu-item>
+                              <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go!...</md-button>
+                           </md-menu-item>
+				<md-menu-bar>
+                     <md-menu>
+                        <button ng-click="$mdOpenMenu()">Mars Rover </button>
+                        <md-menu-content>
+                           <md-menu-item>
+                              <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go!...</md-button>
+                           </md-menu-item>
+				<md-menu-bar>
+                     <md-menu>
+                        <button ng-click="$mdOpenMenu()">NASA Photo Database</button>
+                        <md-menu-content>
+                           <md-menu-item>
+                              <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go!...</md-button>
+                           </md-menu-item>
 		     </md-menu>
                   </md-menu-bar>
                </div>
