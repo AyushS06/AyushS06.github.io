@@ -2,16 +2,24 @@
 <html>
 <head>
 <meta charset="utf-8">
-<script src="js\angular.min.js"></script>
+<head>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 </head>
+
 <body>
-<div ng-app="myFruit" ng-controller="iController">
-<p>Please select your favorite fruit.</p>
-<select ng-model="choosedFruit" ng-options="obj.fruit for obj in fruits" size = "4">
-</select>
-<h3>Your favorite fruit is: {{choosedFruit.fruit}}</h3>
-<h3>The color is: {{choosedFruit.color}}<h3>
-</div>
+  <div ng-app="myFruit" ng-controller="iController">
+    <p>Please select your favorite fruit.</p>
+    <select ng-model="choosedFruit" ng-options="obj.fruit for obj in fruits" size = "4">
+    </select>
+    <h3>Your favorite fruit is: {{choosedFruit.fruit}}</h3>
+    <h3>The color is: {{choosedFruit.color}}<h3>
+  </div>
+
 <script>
 var app = angular.module('myFruit', [ ]);
 app.controller('iController', function($scope) {
