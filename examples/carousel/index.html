@@ -26,6 +26,18 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<!-- <script src="hello.js"></script> -->
+ 	   <script>
+		    angular.module('demo', [])
+                    .controller('Hello', function($scope, $http) {
+                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
+                        then(function(response) {
+                       $scope.apod = response.data;
+        	});
+		   });
+	    </script>
+
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
@@ -49,8 +61,8 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#contact">Interactive Timeline</a></li>
-                <li><a href="">NASA Photo Database</a></li>
+                <li class="active"><a href="#">Interactive Timeline</a></li>
+                <li><a href="#about">NASA Photo Database</a></li>
                 <li><a href="#contact">Asteroid Proximity Detector</a></li>
                 <!--
                 <li class="dropdown">
@@ -163,10 +175,11 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Picture of the day <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">These pictures are accessed daily using the NASA API and shows the image</p>
         </div>
         <div class="col-md-5">
+          <img src="{{apod.hdurl}}" />
           <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
