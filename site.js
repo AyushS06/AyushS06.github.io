@@ -18,6 +18,7 @@ $scope.search = function($scope,$http) {
         $scope.items = data.data;
     }).error(function(data, status, headers, config) {
         console.log("No data found..");
+    });
     //$scope.searchResult = calculateService.calculate($scope.quantity, 10);
   };
 
