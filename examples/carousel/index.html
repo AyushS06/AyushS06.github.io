@@ -176,7 +176,8 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Picture of the day <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">"{{apod.explanation}}"</p>
+          <p class="lead">{{apod.date}}</p>
+          <!-- <p class="lead">{{apod.explanation}}</p> -->
         </div>
         <div class="col-md-5" ng-controller="apod">
           <img src="{{apod.hdurl}}" />
