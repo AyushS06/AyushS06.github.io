@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    
+    <link rel="stylesheet" href="style.css" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="ApplicationController">
+    <p>Greetings {{user}}!</p>
+    
+    <h2>Page:</h2>
+    <!-- ngView -->
+  	<div style="border-bottom:1px solid #ccc;padding-bottom:20px;" role="main" data-ng-view></div>
+  
+  	<!-- Search Results -->
+  	<h2>Search Results</h2>
+  	<p>Search Term: {{searchService.searchTerm}}</p>
+  	<p>Search State: {{searchService.typeOfSearch}}</p>
+  	
+  	<ul class="search-menu">
+  	  <li class="search-menu-item" ng-class="{'active': searchService.typeOfSearch=='web'}" ng-click="searchService.switchSearchType('web')">WEB</li>
+  	  <li class="search-menu-item" ng-class="{'active': searchService.typeOfSearch=='image'}" ng-click="searchService.switchSearchType('image')">IMAGE</li>
+  	</ul>
+  	
+  	<h3>{{searchService.typeOfSearch}} Results</h3>
+  	<div data-ng-if="searchService.typeOfSearch=='web'" data-ng-repeat="searchItem in searchService.arrSearchResults">
+  	  <p style="background-color:blue;padding:10px;border-bottom: 2px solid #000">Search Result: <br/>{{searchItem}}</p>
+  	</div>
+  	<div data-ng-if="searchService.typeOfSearch=='image'" data-ng-repeat="searchItem in searchService.arrSearchResults">
+  	  <img style="background-color:red;padding:10px;border-bottom: 2px solid #000" ng-src="{{searchItem}}" title="Search Item" alt="image search item" />
+  	</div>
+  	
+  	<div ng-if="searchService.userSearched == true && searchService.arrSearchResults.length == 0">
+  	  <p>No results found</p>
+  	</div>
+    
+  </body>
+
+</html>
