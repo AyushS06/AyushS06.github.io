@@ -29,14 +29,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     	<!-- <script src="hello.js"></script> -->
  	   <script>
-		    angular.module('demo', [])
-                    .controller('apodctrl', function($scope, $http) {
+		angular.module('demo', [])
+                    .controller('Hello', function($scope, $http) {
                         $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
                         then(function(response) {
                        $scope.apod = response.data;
         	});
-		   });
-	    </script>
+		});
+	</script>
 	    
 
 
@@ -179,7 +179,7 @@
           <h2 class="featurette-heading">Picture of the day <span class="text-muted">It'll blow your mind.</span></h2>
           
         </div>
-        <div class="col-md-5" ng-controller="apodctrl">
+        <div class="col-md-5" ng-controller="Hello">
 	  <!-- <p class="lead">{{apod.date}}</p>
           <p class="lead">{{apod.explanation}}</p> -->
           <img src="{{apod.hdurl}}" />
