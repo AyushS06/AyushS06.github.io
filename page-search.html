@@ -1,0 +1,15 @@
+<form name="search" role="form">
+    <div class="input-group input-group-search">
+
+        <input type="text" class="form-control" ng-model="blab" name="q" required>
+        <span class="input-group-addon">
+            <button class="btn-search" ng-disabled="search.$invalid" ng-click="searchService.submitSearch(blab)">
+                Search<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+            <button class="btn" ng-click="searchService.clearSearch()">
+                Clear
+            </button>
+        </span>
+        <input type="hidden" name="mode" value="web"/>
+    </div>
+</form>
