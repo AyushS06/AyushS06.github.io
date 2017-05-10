@@ -175,13 +175,13 @@
       <hr class="featurette-divider">
 
       <div class="row featurette" >
-        <div class="col-md-7" >
+        <div class="col-md-7" ng-controller="Hello">
           <h2 class="featurette-heading">Picture of the day <span class="text-muted">It'll blow your mind.</span></h2>
-          
+          <p class="lead">{{apod.date}}</p>
+          <p class="lead">{{apod.explanation}}</p> 
         </div>
         <div class="col-md-5" ng-controller="Hello">
-	  <p class="lead">{{apod.date}}</p>
-          <p class="lead">{{apod.explanation}}</p> 
+	  
           <img src="{{apod.hdurl}}" />
           <!-- <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image"> -->
         </div>
