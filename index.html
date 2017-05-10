@@ -1,137 +1,327 @@
 <!DOCTYPE html>
-<html>
-<head>
-<style>
-body {
-    background-image: url("imagename.png");
-    background-color: #93B874;
-}	
-</style>
-</head>
-<body>
-	</body>
-</html>
-    <html lang="en" >
-   <head>
-      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
-	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <script language="javascript">
-         angular
-            .module('firstApplication', ['ngMaterial'])
-            .controller('menubarController', menubarController);
+<html lang="en" ng-app="demo">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
 
-         function menubarController ($scope, $mdDialog) {
-            this.sampleAction = function(name, ev) {
-               $mdDialog.show($mdDialog.alert()
-                  .title(name)   
-                  .textContent('Start learning "' + name + '!')
-                  .ok('OK')
-                  .targetEvent(ev)
-               );
-            };
-         }                 
-      </script>      
-   </head>
-   <body ng-app="firstApplication"> 
-      <div id="menubarContainer" ng-controller="menubarController as ctrl" layout="row" ng-cloak>
-         <md-toolbar class="md-menu-toolbar">
-            <div layout="row">
-               <div>
-                  <h2 class="md-toolbar-tools">All About Space</h2>
-                  <md-menu-bar>
-                     <md-menu>
-                        <button ng-click="$mdOpenMenu()">Past</button>
-                        <md-menu-content>
-                           <md-menu-item>
-                              <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go!</md-button>
-                           </md-menu-item>
-                        </md-menu-content>
-                     </md-menu>
-	            <md-menu>
-                        <button ng-click="$mdOpenMenu()">Present</button>
-                        <md-menu-content>
-                           <md-menu-item>
-                              <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go!</md-button>
-                           </md-menu-item> 
-				<md-menu-content>
-		     </md-menu>
-	            <md-menu>
-                        <button ng-click="$mdOpenMenu()">Future</button>
-                        <md-menu-content>
-                           <md-menu-item>
-                              <md-button ng-click="ctrl.sampleAction('Let's Go!', $event)">Let's Go!</md-button>
-                           </md-menu-item> 
-				</md-menu-content>
-				</md-menu>
-                     <md-menu>
-                        <button ng-click="$mdOpenMenu()">Interactive Timeline</button>
-                        <md-menu-content>
-				<md-menu-item>
-                              <md-button ng-click="ctrl.sampleAction('Let's Go', $event)">Let's Go!</md-button>
-                           </md-menu-item>
-                        </md-menu-content>
-                     </md-menu>
-		     <md-menu>
-                        <button ng-click="$mdOpenMenu()">Mars Rover</button>
-                        <md-menu-content>
-				<md-menu-item>
-                              <md-button ng-click="ctrl.sampleAction('Let's Go', $event)">Let's Go!</md-button>
-                           </md-menu-item>
-                        </md-menu-content>
-                     </md-menu>
-		    <md-menu>
-                        <button ng-click="$mdOpenMenu()">NASA Photo Database</button>
-                        <md-menu-content>
-				<md-menu-item>
-                              <md-button ng-click="ctrl.sampleAction('Let's Go', $event)">Let's Go!</md-button>
-                           </md-menu-item>
-                        </md-menu-content>
-                     </md-menu>
-		    <md-menu>
-                        <button ng-click="$mdOpenMenu()">Asteroid Proximity Detector</button>
-                        <md-menu-content>
-				<md-menu-item>
-                              <md-button ng-click="ctrl.sampleAction('Let's Go', $event)">Let's Go!</md-button>
-                           </md-menu-item>
-                        </md-menu-content>
-                     </md-menu>
-                  </md-menu-bar>
-               </div>
+    <title>Journey To the Stars</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<!-- <script src="hello.js"></script> -->
+ 	   <script>
+		var rightNow = new Date();
+                var res = rightNow.toISOString().slice(0,10);
+		//alert(res);
+		   
+		angular.module('demo', [])
+                    .controller('Hello', function($scope, $http) {
+                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
+                        then(function(response) {
+                       $scope.apod = response.data;
+        	});
+		});
+	</script>
+	    
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <!-- Time line -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" />
+    <link rel="stylesheet" href="https://rawgithub.com/Caged/d3-tip/master/examples/example-styles.css" />
+    <link rel="stylesheet" href="/d3-timeline-master/dist/timeline-chart.css" />
+    <link rel="stylesheet" href="/d3-timeline-master/example/style.css" />
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+    <script src="/d3-timeline-master/dist/timeline-chart.js"></script>
+	  
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Using NASA Open Data API</a>
             </div>
-         </md-toolbar>	 		 
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#interact">Interactive Timeline</a></li>
+                <li><a href="#photo">NASA Photo Database</a></li>
+                <li><a href="#asteroid">Asteroid Proximity Detector</a></li>
+                <!--
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+
       </div>
-   </body>
-	      
-<head>
-  <title>Journey to The Stars</title>
-</head>
-<body>
-<div ng-app="">
-  <h1 style="color:#FFFF00;">Space Exploration</h1>
-  <p>"Have you every wondered how life is in space? There are only 100 billion stars in the galaxy and we are just one tiny aspect of the entire universe. As history dictats, humans get adventerous and explore new frontiers. The people that help us do that are astronauts, aersospace engineers, etc.... </p>
-  <a href="https://www.nasa.gov/">Learn More</a>
-  <p>Here are some upcoming NASA Missions:</p>
-  <ul>
-    <li>Psyche</li>
-    <li>Europa Clipper</li>
-    <li>Insight</li>
-    <li>James Webb Space Telescope</li>
-  </ul>
-  <html lang="en-US">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-	  </div>
-<body>
-<html lang="en-US">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-<body>
-<div ng-app="">
-  <p>Search : <input type="text" ng-model="Search"></p>
-  <h1>{{Search}}</h1>
-</div>
-</body>
-</html>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"> 
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>NASA Open API</h1>
+              <p>NASA provides data, including imagery, eminently accessible through a web based API to application developers. This publicly available data is free for public consumption with certain restrictions. You can setup an account and access the API as we will see in this website</p>
+              <p><a class="btn btn-lg btn-primary" href="https://api.nasa.gov/index.html" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Limits on usage</h1>
+              <p>There are limits  placed on the number of API requests you may make using your API key.. Hourly Limit: 1,000 requests per hour. Your can check your current rate limit and usage details by inspecting the X-RateLimit-Limit and X-RateLimit-Remaining HTTP headers that are returned on every API response </p>
+              <p><a class="btn btn-lg btn-primary" href="https://api.nasa.gov/api.html#web-service-rate-limits" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Picture of the day</h1>
+              <p>One of the most popular websites at NASA is the Astronomy Picture of the Day. This website is one of the most popular websites across all federal agencies </p>
+              <p><a class="btn btn-lg btn-primary" href="https://apod.nasa.gov/apod/astropix.html" role="button">See picture</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider"> 
+
+      <div class="row featurette" >
+        <div class="col-md-7" ng-controller="Hello">
+          <h2 class="featurette-heading">Picture of the day. <span class="text-muted">It'll blow your mind.</span></h2>
+	  <!--<p>Select a different date : <input type="text" ng-model=  -->
+          <p class="lead">{{apod.date}}</p>
+          <p>{{apod.explanation}}</p> 
+        </div>
+        <div class="col-md-5" ng-controller="Hello">
+	  
+          <img class="img-fluid rounded mx-auto d-block" src="{{apod.hdurl}}" />
+          <!-- <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image"> -->
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette" id="interact">
+        <h2 class="featurette-heading">Interactive Timeline <span class="text-muted"></span></h2>
+	<p>The interactive timeline displays the history of various space exploration and missions over the last 10 years </p>
+	  <section flex flex-center>
+            
+	    <div class="col-xs-6 col-md-10" id="chart"></div>
+         </section>
+	 	
+	<script id="code">
+        'use strict';
+        const element = document.getElementById('chart');
+        const data = [{
+            label: 'Name',
+            data: [{
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 5, 1])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 6, 1])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 7, 1])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 8, 1])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 9, 1])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 10, 1]),
+                customClass: 'blue-dot'
+            }]
+        }, {
+            label: 'Type',
+            data: [{
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 5, 11])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 5, 15])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 7, 10])
+            }, {
+                label: 'I\'m a label with a custom class',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([2016, 6, 1]),
+                to: new Date([2016, 7, 1]),
+                customClass: 'blue-interval'
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 10, 1])
+            }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 11, 1])
+            }]
+        }, {
+            label: 'Imp',
+            data: [{
+                label: 'Label 1',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([2016, 5, 15]),
+                to: new Date([2016, 7, 1])
+            }, {
+                label: 'Label 2',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([2016, 8, 1]),
+                to: new Date([2016, 9, 12])
+            }]
+        }];
+        const timeline = new TimelineChart(element, data, {
+            enableLiveTimer: true,
+            tip: function(d) {
+                return d.at || `${d.from}<br>${d.to}`;
+            }
+        }).onVizChange(e => console.log(e));
+    </script>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2016 Ayush, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
