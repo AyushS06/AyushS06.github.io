@@ -36,7 +36,7 @@
 		   
 		angular.module('demo', [])
                     .controller('Hello', function($scope, $http) {
-                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk&date='+res).
+                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
                         then(function(response) {
                        $scope.apod = response.data;
         	});
