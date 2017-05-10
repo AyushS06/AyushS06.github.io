@@ -9,6 +9,7 @@
             <h3 class="headName">Ajax Live search using AngularJs</h3>
             <div class="bar">
                 <input type="text" class="search" ng-model="searchString" placeholder="Enter your search terms" />
+                 <button ng-click="search()">Search</button>
             </div>
             <ul class="data-ctrl">
                 <li ng-repeat="i in items | searchFor:searchString">
