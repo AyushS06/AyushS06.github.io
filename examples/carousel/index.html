@@ -37,15 +37,7 @@
         	});
 		   });
 	    </script>
-	    <script>
-		    angular.module('demo', [])
-                    .controller('apod2', function($scope, $http) {
-                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
-                        then(function(response) {
-                       $scope.apod2 = response.data;
-        	});
-		   });
-	    </script>
+	    
 
 
     <!-- Custom styles for this template -->
@@ -183,12 +175,13 @@
       <hr class="featurette-divider">
 
       <div class="row featurette" >
-        <div class="col-md-7" ng-controller="apod2">
+        <div class="col-md-7" >
           <h2 class="featurette-heading">Picture of the day <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">{{apod2.date}}</p>
-          <p class="lead">{{apod2.explanation}}</p> 
+          
         </div>
         <div class="col-md-5" ng-controller="apod">
+	  <p class="lead">{{apod2.date}}</p>
+          <p class="lead">{{apod2.explanation}}</p> 
           <img class="featurette-image img-responsive center-block" data-src="{{apod.hdurl}}" />
           <!-- <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image"> -->
         </div>
