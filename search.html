@@ -34,7 +34,7 @@
   });
         </script>
     </head>
-    <body>
+    
         <div class="container-fluid outerdiv" ng-app="myApp" ng-controller="MovieController">
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -61,7 +61,7 @@
       </div>
 
       <div ng-if="details.Response==='True'">
-        <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster">
+        <!-- <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster"> -->
 
         <span class="span-outer">
           <a href="http://imdb.com/title/{{ details.imdbID }}" target="_blank">{{ details.Title }}</a>
@@ -119,7 +119,7 @@
       </div>
     </div>
   </div>
-</div>
-    </body>
+
+   
     
 </html>
