@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<!-- <script src="hello.js"></script> -->
+ 	<script>
+		angular.module('demo', [])
+                    .controller('Hello', function($scope, $http) {
+                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
+                        then(function(response) {
+                       $scope.greeting = response.data;
+        	});
+		});
+	</script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+			<p>The ID is {{greeting.date}}</p>
+			<p>The content is {{greeting.explanation}}</p>
+			<img src="{{greeting.hdurl}}" />
+		</div>
+	</body>
+</html>
