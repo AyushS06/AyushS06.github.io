@@ -67,8 +67,8 @@
         <!-- <img ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" class="thumbnail animated flip movie-poster"> -->
 
         <span class="span-outer">
-          <a href="http://imdb.com/title/{{ details.imdbID }}" target="_blank">{{ details.Title }}</a>
-        </span>, {{ details.Year }}
+          <a href="http://imdb.com/title/{{ details.imdbID }}" target="_blank">{{ details.title }}</a>
+        </span>, {{ details.date_created }}
 
         <p><strong>Released on:</strong> {{ details.Released }} ({{ details.Runtime }})</p>
 
