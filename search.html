@@ -10,15 +10,18 @@
       fetch();
     });
 
-    $scope.search = "Sherlock Holmes";
+    $scope.search = "Apollo";
 
     function fetch() {
-      $http.get("https://www.omdbapi.com/?t=" + $scope.search + "&tomatoes=true&plot=full")
+        //https://images-api.nasa.gov/search
+      // $http.get("https://www.omdbapi.com/?t=" + $scope.search + "&tomatoes=true&plot=full")
+      $http.get("https://images-api.nasa.gov/search?q=" + $scope.search)
         .then(function(response) {
           $scope.details = response.data;
         });
 
-      $http.get("https://www.omdbapi.com/?s=" + $scope.search)
+      $http.get("https://images-api.nasa.gov/search?q=" + $scope.search)
+      //$http.get("https://www.omdbapi.com/?s=" + $scope.search)
         .then(function(response) {
           $scope.related = response.data;
         });
