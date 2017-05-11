@@ -9,7 +9,7 @@
                     .controller('Hello', function($scope, $http) {
                         $http.jsonp("https://images-api.nasa.gov/search?q=Apollo").
                         then(function(response) {
-                       $scope.greeting = response.data;
+                       $scope.greeting = response.collection.items;
         	});
 		});
 		
@@ -20,8 +20,8 @@
 
 	<body>
 		<div ng-controller="Hello">
-			<p>The ID is {{greeting.title}}</p>
-			<p>The content is {{greeting.date_created}}</p>
+			<p>The ID is {{greeting.data.title}}</p>
+			<p>The content is {{greeting.data.date_created}}</p>
 			<!-- <img src="{{greeting.href}}" /> -->
 		</div>
 	</body>
