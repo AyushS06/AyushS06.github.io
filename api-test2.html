@@ -7,7 +7,7 @@
  	<script>
 		angular.module('demo', [])
                     .controller('Hello', function($scope, $http) {
-                        $http.get('https://images-api.nasa.gov/search?q=Apollo').
+                        $http.get("https://images-api.nasa.gov/search?q=Apollo").
                         then(function(response) {
                        $scope.greeting = response.data;
         	});
