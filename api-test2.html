@@ -9,8 +9,8 @@
                     .controller('Hello', function($scope, $http) {
                         $http.jsonp("https://images-api.nasa.gov/search?q=Apollo").
                         then(function(response) {
-			     $scope.items = response.collection.items;
-			     $scope.metadata = response.collection.metadata;
+			     $scope.items = response.collection[0].items;
+			     $scope.metadata = response.collection[0].metadata;
         	});
 		});
 		
