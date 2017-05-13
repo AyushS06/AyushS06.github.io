@@ -10,7 +10,9 @@
 app.controller("PostsCtrl", function($scope, $http) {
   $http.jsonp('https://images-api.nasa.gov/search?q=Apollo').
     success(function(data, status, headers, config) {
-      $scope.posts = data;
+         alert(data);
+	  console.log(data);
+	  $scope.posts = data;
     }).
     error(function(data, status, headers, config) {
       // log error
