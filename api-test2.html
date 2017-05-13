@@ -8,12 +8,15 @@
 		var app = angular.module('myApp', []);
                 
 		app.controller('myCtrl', function($scope, $http) {
-                        $http.jsonp("https://images-api.nasa.gov/search?q=Apollo").
-                        then(function(response) {
-			     $scope.collection = response;
-			     console.log(response);     
-        		});
-		}); 
+			$scope.showMe = false;
+			$scope.myFunc = function($http) {
+                           $http.jsonp("https://images-api.nasa.gov/search?q=Apollo").then(function(response) {
+			       $scope.collection = response;
+			      console.log(response);     
+        		   }
+			}
+		
+		}; 
 		/*
 		var app = angular.module('myApp', []);
 		app.controller('myCtrl', function($scope, $http) {
