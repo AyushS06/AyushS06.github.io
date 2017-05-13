@@ -34,6 +34,14 @@ rect.interval.blue-interval {
     fill: blue;
     stroke: blue;
 }
+rect.interval.green-interval {
+    fill: green;
+    stroke: green;
+}
+rect.interval.red-interval {
+    fill: red;
+    stroke: red;
+}
 
 circle.blue-dot {
     fill: blue;
