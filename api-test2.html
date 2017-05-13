@@ -15,8 +15,14 @@
         	});
 		});
 		
-		
-	</script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+		    $scope.showMe = false;
+		    $scope.myFunc = function() {
+			$scope.showMe = !$scope.showMe;
+		    }
+		});
+		</script>
 	</head>
 	
 
@@ -32,15 +38,7 @@
 			</div>
 
 		</div>
-		<script>
-		var app = angular.module('myApp', []);
-		app.controller('myCtrl', function($scope) {
-		    $scope.showMe = false;
-		    $scope.myFunc = function() {
-			$scope.showMe = !$scope.showMe;
-		    }
-		});
-		</script>
+		
 		
 		<div ng-controller="Hello">
 			
