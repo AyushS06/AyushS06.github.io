@@ -21,11 +21,7 @@
 		    $scope.myFunc = function() {
 			$scope.showMe = !$scope.showMe;
 		    }
-		    $scope.show = function() {
-			$http.jsonp("https://images-api.nasa.gov/search?q=Apollo").then(function(response) {
-			     $scope.collection = response;
-			     console.log(response);
-		    }}
+		    
 		    
 		});
 		</script>
