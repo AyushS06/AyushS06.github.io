@@ -5,16 +5,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     	<!-- <script src="hello.js"></script> -->
  	<script>
-		/*angular.module('demo', [])
-                    .controller('Hello', function($scope, $http) {
+		var app = angular.module('myApp', []);
+                
+		app.controller('myFunc', function($scope, $http) {
                         $http.jsonp("https://images-api.nasa.gov/search?q=Apollo").
                         then(function(response) {
 			     $scope.collection = response;
-			     console.log(response);
-			     
-        	});
-		}); */
-		
+			     console.log(response);     
+        		});
+		}); 
+		/*
 		var app = angular.module('myApp', []);
 		app.controller('myCtrl', function($scope, $http) {
 		    $scope.showMe = false;
@@ -24,6 +24,7 @@
 		    
 		    
 		});
+		*/
 		</script>
 	</head>
 	
@@ -38,6 +39,7 @@
 			    <div>Pasta</div>
 			    <div>Pesce</div>
 			</div>
+			<p ng-model="collection">
 
 		</div>
 		
