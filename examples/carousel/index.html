@@ -218,44 +218,21 @@
 	<script id="code">
         'use strict';
         const element = document.getElementById('chart');
-        const data = [{
-            label: 'NASA Important Events',
-            data: [{
-        }, {
+	
+	const data = [{
+            label: '',
+            data: [
+	    {
                 label: 'First NASA Launch of Pioneer One',
                 type: TimelineChart.TYPE.INTERVAL,
                 from: new Date([1956, 10, 11]),
                 to: new Date([1958, 12, 11]),
 		customClass: 'blue-interval'
-              }, {
-                label: 'First Human to enter space',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1959, 4, 12]),
-                to: new Date([1961, 4, 13]),
-		customClass: 'blue-interval'
-              }, {
-                label: 'Launch of Friendship 7',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1961, 2, 20]),
-                to: new Date([1962, 2, 21]),
-		customClass: 'blue-interval'
-	      }, {
+             }, {
                 label: 'First American Spacewalk',
                 type: TimelineChart.TYPE.INTERVAL,
                 from: new Date([1963, 6, 3]),
                 to: new Date([1965, 6, 4]),
-		customClass: 'blue-interval'
-	      }, {
-                label: 'Surveyor lands on the moon',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1965, 6, 16]),
-                to: new Date([1966, 6, 17]),
-		customClass: 'blue-interval'
-	      }, {
-                label: 'Final Flight of the Gemini Program',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1966, 6, 15]),
-                to: new Date([1966, 11, 16]),
 		customClass: 'blue-interval'
 	      }, {
                 label: 'Apollo 8 lauches and circumnavigates the moon with a 3 manned crew',
@@ -264,22 +241,10 @@
                 to: new Date([1968, 12, 27]),
 		customClass: 'blue-interval'
 	     }, {
-                label: 'First Walk on the moon',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1968, 12, 28]),
-                to: new Date([1969, 7, 24]),
-		customClass: 'blue-interval'
-	     }, {
                 label: 'Apollo 14 lands on the moon',
                 type: TimelineChart.TYPE.INTERVAL,
                 from: new Date([1970, 5, 2]),
                 to: new Date([1971, 5, 3]),
-		customClass: 'blue-interval'
-	     }, {
-                label: 'Viking One landed on Mars',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1973, 8, 20]),
-                to: new Date([1976, 8, 21]),
 		customClass: 'blue-interval'
 	     }, {
                 label: 'Space Shuttle Challenger explodes',
@@ -288,13 +253,39 @@
                 to: new Date([1986, 1, 29]),
 		customClass: 'blue-interval'
 	     }, {
+                type: TimelineChart.TYPE.POINT,
+                at: new Date([2016, 10, 1]),
+                customClass: 'blue-dot'
+            }]
+        }, {
+            label: 'Type',
+            data: [
+	     {
+                label: 'First Human to enter space',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([1959, 4, 12]),
+                to: new Date([1961, 4, 13]),
+		customClass: 'blue-interval'
+              }, {
+                label: 'Surveyor lands on the moon',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([1965, 6, 16]),
+                to: new Date([1966, 6, 17]),
+		customClass: 'blue-interval'
+	      }, {
+                label: 'First Walk on the moon',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([1968, 12, 28]),
+                to: new Date([1969, 7, 24]),
+		customClass: 'blue-interval'
+	     }, {
                 label: 'Magellan mapped out Venus atmosphere',
                 type: TimelineChart.TYPE.INTERVAL,
                 from: new Date([1987, 5, 15]),
                 to: new Date([1989, 5, 16]),
 		customClass: 'blue-interval'
 	     }, {
-                label: 'Fisr flight of Space shuttle Endeavour',
+                label: 'First flight of Space shuttle Endeavour',
                 type: TimelineChart.TYPE.INTERVAL,
                 from: new Date([1990, 5, 2]),
                 to: new Date([1992, 5, 3]),
@@ -305,7 +296,29 @@
                 from: new Date([1992, 1, 1]),
                 to: new Date([1995, 1, 2]),
 		customClass: 'blue-interval'
-	     }, {
+	     }]
+        }, {
+            label: 'Imp',
+            data: [{
+                label: 'Launch of Friendship 7',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([1961, 2, 20]),
+                to: new Date([1962, 2, 21]),
+		customClass: 'blue-interval'
+	        }, 
+		{
+                label: 'Final Flight of the Gemini Program',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([1966, 6, 15]),
+                to: new Date([1966, 11, 16]),
+		customClass: 'blue-interval'
+	      }, {
+                label: 'Viking One landed on Mars',
+                type: TimelineChart.TYPE.INTERVAL,
+                from: new Date([1973, 8, 20]),
+                to: new Date([1976, 8, 21]),
+		customClass: 'blue-interval'
+	     },{
                 label: 'Cassini Space Probe left earth, bound for Saturn',
                 type: TimelineChart.TYPE.INTERVAL,
                 from: new Date([1995, 10, 15]),
@@ -323,7 +336,7 @@
                 from: new Date([2005, 5, 25]),
                 to: new Date([2008, 5, 26]),
 		customClass: 'blue-interval'
-	     }, {
+	     },{
                 label: 'Phoenix confirms the presence of water on Mars',
                 type: TimelineChart.TYPE.INTERVAL,
                 from: new Date([2008, 5, 27]),
@@ -337,6 +350,7 @@
 		customClass: 'blue-interval'		    
             }]
         }];
+	
         const timeline = new TimelineChart(element, data, {
             enableLiveTimer: true,
             tip: function(d) {
