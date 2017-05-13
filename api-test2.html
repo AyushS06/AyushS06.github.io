@@ -1,11 +1,11 @@
 <!doctype html> 
-<html ng-app="demo">
+<html>
 	<head>
 		<title>Hello AngularJS</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     	<!-- <script src="hello.js"></script> -->
  	<script>
-		angular.module('demo', [])
+		/*angular.module('demo', [])
                     .controller('Hello', function($scope, $http) {
                         $http.jsonp("https://images-api.nasa.gov/search?q=Apollo").
                         then(function(response) {
@@ -13,7 +13,7 @@
 			     console.log(response);
 			     
         	});
-		});
+		}); */
 		
 		var app = angular.module('myApp', []);
 		app.controller('myCtrl', function($scope) {
