@@ -39,19 +39,18 @@
 			<ul >
     				<li ng-repeat="item in neo.near_earth_objects"> {{ item.nasa_jpl_url }} </li>
 			</ul>
-			<table tr-ng-grid="" items="neo.near_earth_objects" fields="['name', 'description','neo_reference_id','estimated_diameter.kilometers.estimated_diameter_max', 'orbital_data.orbit_determination_date', 'nasa_jpl_url']"></table>
-			<table>
-			<tbody>
-                            <tr ng-repeat="neo.near_earth_objects">
-	                	    <td>{{item.neo_reference_id}}</td>
-	        	            <td>{{item.name}}</td>
-        	        	    <td>{{item.description}}</td>
-	        	            <td>{{item.nasa_jpl_url}}</td>
-        	        	    <td>{{item.estimated_diameter.kilometers.estimated_diameter_max}}</td>
-	                	    <td>{{item.orbital_data.orbit_determination_date}}</td>
-        	            </tr>
-	               </tbody>
+			<table tr-ng-grid="" items="neo.near_earth_objects" fields="['name', 'is_potentially_hazardous_asteroid','close_approach_data[0].close_approach_date','estimated_diameter.kilometers.estimated_diameter_max', 'orbital_data.orbit_determination_date', 'nasa_jpl_url']">
+				<thead>
+					<tr>
+					    <th field-name="name" display-name="Asteroid Name" enable-filtering="true" enable-sorting="true" cell-width="10em" display-align="right"></th>
+					    <th field-name="is_potentially_hazardous_asteroid" display-name="Is hazardous?" display-format="uppercase"></th>
+					    <th field-name="close_approach_data[0].close_approach_date" display-name="Approach date" > </th>
+					    <th field-name="estimated_diameter.kilometers.estimated_diameter_max" display-name="Diameter in kms" display-align="center"></th>
+					    <th field-name="close_approach_data[0].relative_velocity.kilometers_per_second" display-name="Speed in km/sec" display-align="center"></th>  					    
+					</tr>
+				    </thead>
 			</table>
+			
 			<!-- <p>The ID is {{neo.near_earth_objects}}</p> 
 			<img src="{{greeting.hdurl}}" /> -->
 		</div>
