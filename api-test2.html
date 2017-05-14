@@ -10,7 +10,7 @@
 		app.controller('myCtrl', function($scope, $http) {
 			$scope.showMe = false;
 			$scope.myFunc = function($http) {
-                           $http.jsonp("https://images-api.nasa.gov/search?q=Apollo").then(function(response) {
+                           $http.get("https://images-api.nasa.gov/search?q=Apollo").then(function(response) {
 			       alert('response' + angular.toJson(response))
 				   $scope.collection = response;
 			      console.log(response);     
