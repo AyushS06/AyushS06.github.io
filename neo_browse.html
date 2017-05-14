@@ -45,6 +45,8 @@
 					    <th field-name="name" display-name="Asteroid Name" enable-filtering="true" enable-sorting="true" cell-width="10em" display-align="right"></th>
 					    <th field-name="is_potentially_hazardous_asteroid" display-name="Is hazardous?" display-format="uppercase"></th>
 					    <th field-name="estimated_diameter.kilometers.estimated_diameter_max" display-name="Diameter in kms" display-align="center"></th>
+					    <th display-name="Close approach date" ></th>
+ 					    <th display-name="Velocity in km/sec" ></th>
   					    <!--<th field-name="close_approach_data" display-name="Approach data" > </th> -->
 					    <!-- <th field-name="close_approach_data[0].relative_velocity.kilometers_per_second" display-name="Speed in km/sec" display-align="center"></th>  					    -->
    					    <th field-name="nasa_jpl_url" display-name="More details" display-align="center"></th>					
@@ -53,10 +55,7 @@
 				    <tbody>
 			           		    
 				    <tr><td>
-					<button class="btn btn-default" ng-click="alert('You clicked on ' + gridItem.name);$event.stopPropagation();">
-						Display {{gridItem.name}}
-			                    </button>
-					    </td>
+					
 				      <td field-name="nasa_jpl_url"> 
 					      <div href="{{gridItem.nasa_jpl_url}}">{{gridItem.nasa_jpl_url}}</div>
 					    </td>  					    
