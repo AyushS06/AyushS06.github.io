@@ -393,25 +393,36 @@
 	 <h2 class="featurette-heading">Asteroid Proximity Detector<span class="text-muted"></span></h2>
 	 <p> The Near Earth Object Web Service provides a list of near earth objects that may be potentially hazardous. The interactive table displays a list of asteroids  </p>
 	  <br/>
-        <table tr-ng-grid="" items="neo.near_earth_objects" page-items="10">
-	    <thead>
-		<tr>
-		    <th field-name="name" display-name="Asteroid Name" enable-filtering="true" enable-sorting="true" cell-width="10em" display-align="right"></th>
-		    <th field-name="is_potentially_hazardous_asteroid" display-name="Is hazardous?" display-format="uppercase"></th>
-		    <th field-name="estimated_diameter.kilometers.estimated_diameter_max" display-name="Diameter in kms" display-align="center"></th>
-		    <th field-name="close_approach_data" display-name="Approach data"  enable-sorting="false" enable-filtering="false" > </th>
-		    <!-- <th field-name="close_approach_data[0].relative_velocity.kilometers_per_second" display-name="Speed in km/sec" display-align="center"></th>  					    -->
-		    <th field-name="nasa_jpl_url" display-name="More details" display-align="center"></th>					
-		</tr>
-	    </thead>
-		<tbody>
+        <table tr-ng-grid="" items="neo.near_earth_objects" page-items="12">
+		<thead>
 			<tr>
-				<td field-name="nasa_jpl_url"> 
-					      <a href="{{gridItem.nasa_jpl_url}}">Link to details...</a>
-				</td>  					    
+			    <th field-name="name" display-name="Asteroid Name" enable-filtering="true" enable-sorting="true" cell-width="10em" display-align="right"></th>
+			    <th field-name="is_potentially_hazardous_asteroid" display-name="Is hazardous?" display-format="uppercase"></th>
+			    <th field-name="estimated_diameter.kilometers.estimated_diameter_max" display-name="Diameter in kms" display-align="center"></th>
+			    <th field-name='relative_velocity' display-name="Velocity in km/sec" ></th>
+			    <th field-name='close_approach_date' display-name="Close approach date" ></th>
+			    <!--<th field-name="close_approach_data" display-name="Approach data" > </th> -->
+			    <!-- <th field-name="close_approach_data[0].relative_velocity.kilometers_per_second" display-name="Speed in km/sec" display-align="center"></th>  					    -->
+			    <th field-name="nasa_jpl_url" display-name="More details" display-align="center"></th>					
 			</tr>
-		</tbody> 
-	    
+		    </thead>
+		    <tbody>
+
+		    <tr>
+
+			<td field-name="nasa_jpl_url"> 
+			      <a href="{{gridItem.nasa_jpl_url}}">{{gridItem.nasa_jpl_url}}</a>
+			    </td>  					    
+
+			<td field-name='relative_velocity' display-name="Velocity in km/sec">
+				<div>{{gridItem.close_approach_data[0].relative_velocity.kilometers_per_second}} </div>
+			</td> 
+			<td field-name='close_approach_date' display-name="Close approach date">
+				<div>{{gridItem.close_approach_data[0].close_approach_date}} </div>
+			</td>
+		    </tr>
+
+		  </tbody> 
 	</table>
 
       <hr class="featurette-divider">
