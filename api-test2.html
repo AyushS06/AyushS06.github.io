@@ -5,21 +5,21 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     	<!-- <script src="hello.js"></script> -->
  	<script>
+		angular.module('myApp', [])
+                   .controller('myCtrl', ['$scope', function ($scope) {
+		    $scope.status = "Accueil";
+		}])
+		.controller('myCtrl', ['$scope','$http', function ($scope, $http) {
+		    $http.get('https://images-api.nasa.gov/search?q=Apollo')
+		        .success(function(data, status, headers, config) {
+		          $scope.posts = data;
+		        })
+		        .error(function(data, status, headers, config) {
+          // log error
+		    });
+		}]);
 		
-		var app = angular.module('myApp', []);
-                
-		app.controller('myCtrl', function($scope, $http) {
-			$scope.showMe = false;
-			$scope.myFunc = function($http) {
-                           $http.get('https://images-api.nasa.gov/search?q=Apollo').then(function(response) {
-			       alert('response' + angular.toJson(response))
-				   $scope.collection = response;
-			      console.log(response);     
-        		   }
-                         )
-			}
 		
-		}); 
 		/*
 		var app = angular.module('myApp', []);
 		app.controller('myCtrl', function($scope, $http) {
