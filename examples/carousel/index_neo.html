@@ -44,18 +44,13 @@
 
 		//alert(res);
 		   
-		angular.module('demo', [])
+		angular.module('demo', ['trNgGrid'])
                     .controller('Hello', function($scope, $http) {
                         $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
                         then(function(response) {
                        $scope.apod = response.data;
         	     })
-		     .controller('neo', function($scope, $http) {
-                        	$http.get('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
-                        	then(function(response) {
-                       			$scope.neo = response.data;
-                       			//console.log(response.data)
-        	     });
+		     
 		});
 		
 	
