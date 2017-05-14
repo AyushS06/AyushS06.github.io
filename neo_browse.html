@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<!-- <script src="hello.js"></script> -->
+ 	<script>
+		angular.module('demo', [])
+                    .controller('Hello', function($scope, $http) {
+                        $http.get('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY').
+                        then(function(response) {
+                       $scope.neo = response.data;
+                       console.log(response.data)
+        	});
+		});
+	</script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+			<p>The ID is {{neo.near_earth_objects}}</p>
+			<img src="{{greeting.hdurl}}" />
+		</div>
+	</body>
+</html>
