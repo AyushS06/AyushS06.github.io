@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="/bootstrap.css">
   </head>
   <body ng-app="MyApp">
-  <div ng-controller="MyCtrl">
-    <input type="text" ng-model="searchTerm" placeholder="Search term">
-    <button ng-click="search()">Search</button>
-    <ul ng-repeat="tweet in searchResult.results">
-      <li>{{tweet.text}}</li>
+  <div ng-controller="MyController">
+    <button type="button" ng-click="getItems()">Get Items</button>
+    <ul>
+       <li ng-repeat="item in items"> item.firstName </li>
     </ul>
-  </div>
+</div>
 </body>
 </html>
