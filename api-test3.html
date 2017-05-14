@@ -18,12 +18,12 @@ function MyCtrl($scope, $resource) {
     <link rel="stylesheet" href="css/bootstrap.css">
   </head>
   <body ng-app="MyApp">
-    <div ng-controller="MyCtrl">
-      <input type="text" ng-model="searchTerm" placeholder="Search term">
-      <button ng-click="search()">Search</button>
-      <ul ng-repeat="tweet in searchResult.results">
-        <li>{{tweet.text}}</li>
-      </ul>
-    </div>  
-  </body>
+  <div ng-controller="MyCtrl">
+    <input type="text" ng-model="searchTerm" placeholder="Search term">
+    <button ng-click="search()">Search</button>
+    <ul ng-repeat="tweet in searchResult.results">
+      <li>{{tweet.text}}</li>
+    </ul>
+  </div>
+</body>
 </html>
