@@ -2,16 +2,31 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-resource.js"></script>
+    <script>
+    function jsonp_example($scope, $http) {
+    $scope.doRequest = function() {
+        var url = "http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts?callback=JSON_CALLBACK";
 
-    <script src="/app.js"></script>
-    <link rel="stylesheet" href="/bootstrap.css">
+        $http.jsonp(url)
+            .success(function(data){
+                console.log(data.posts);
+            });
+    };
+
+    var url = "http://public-api.wordpress.com/rest/v1/sites/wtmpeachtest.wordpress.com/posts?callback=JSON_CALLBACK";
+
+    $http.jsonp(url)
+        .success(function(data){
+            console.log(data.posts);
+        });
+     }
+    </script>
+    
+    
   </head>
   <body ng-app="MyApp">
-  <div ng-controller="MyController">
-    <button type="button" ng-click="getItems()">Get Items</button>
-    <ul>
-       <li ng-repeat="item in items"> item.firstName </li>
-    </ul>
-</div>
+  <div ng-app ng-controller="jsonp_example">
+    <button ng-click="doRequest()">Make JSONP request</button>
+  </div>
 </body>
 </html>
