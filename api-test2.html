@@ -10,7 +10,7 @@
 		    $scope.status = "Accueil";
 		}])
 		.controller('myCtrl', ['$scope','$http', function ($scope, $http) {
-		    $http.get('https://images-api.nasa.gov/search?q=Apollo')
+		    $http.jsonp('https://images-api.nasa.gov/search?q=Apollo')
 		        .success(function(data, status, headers, config) {
 		          $scope.posts = data;
 		        })
