@@ -12,10 +12,11 @@
 		.controller('myCtrl', ['$scope','$http', function ($scope, $http) {
 		    $http.jsonp('https://images-api.nasa.gov/search?q=Apollo')
 		        .success(function(data, status, headers, config) {
-		          $scope.collection = status;
+		          $scope.collection = headers;
 		        })
 		        .error(function(data, status, headers, config) {
           // log error
+			    console.log(status)
 		    });
 		}]);
 		
