@@ -58,11 +58,11 @@
 			                    </button>
 					    </td>
 				      <td field-name="nasa_jpl_url"> 
-					      <a href="{{gridItem.nasa_jpl_url}}">{{gridItem.nasa_jpl_url}}</a>
+					      <div href="{{gridItem.nasa_jpl_url}}">{{gridItem.nasa_jpl_url}}</div>
 					    </td>  					    
-				    <!--<td field-name='close_approach_data[0].relative_velocity.kilometers_per_second'>
-			                        <div>{{gridItem.pastAddresses[1].Neighborhood}} <button href="#">hello{{index}}</button></div>
-                    			</td> -->
+				      <td field-name='close_approach_data'>
+			                        <div>{{gridItem.close_approach_data[0].relative_velocity.kilometers_per_second}} </div>
+                    			</td> 
 				    </tr>
 				
 				  </tbody> 
