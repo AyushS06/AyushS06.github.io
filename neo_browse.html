@@ -18,6 +18,9 @@
 
 	<body>
 		<div ng-controller="Hello">
+			<ul >
+    				<li ng-repeat="item in neo.near_earth_objects"> {{ item.nasa_jpl_url }} </li>
+			</ul>
 			<p>The ID is {{neo.near_earth_objects}}</p>
 			<img src="{{greeting.hdurl}}" />
 		</div>
