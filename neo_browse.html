@@ -21,6 +21,18 @@
 			<ul >
     				<li ng-repeat="item in neo.near_earth_objects"> {{ item.nasa_jpl_url }} </li>
 			</ul>
+			<table>
+			<tbody>
+                            <tr ng-repeat="item in neo.near_earth_objects">
+	                	    <td>{{item.neo_reference_id"}}</td>
+	        	            <td>{{item.name}}</td>
+        	        	    <td>{{item.description}}</td>
+	        	            <td>{{item.nasa_jpl_url}}</td>
+        	        	    <td>{{item.stimated_diameter.kilometers.estimated_diameter_max}}</td>
+	                	    <td>{{item.orbital_data.orbit_determination_date"}}</td>
+        	            </tr>
+	               </tbody>
+			</table>
 			<!-- <p>The ID is {{neo.near_earth_objects}}</p> -->
 			<img src="{{greeting.hdurl}}" />
 		</div>
