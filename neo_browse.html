@@ -28,7 +28,7 @@
                         	$http.get('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
                         	then(function(response) {
                        			$scope.neo = response.data;
-                       			console.log(response.data)
+                       			//console.log(response.data)
         			});
 			});
 		//angular.module("demo", ["trNgGrid"]);
@@ -47,11 +47,14 @@
 					    <th field-name="estimated_diameter.kilometers.estimated_diameter_max" display-name="Diameter in kms" display-align="center"></th>
   					    <th field-name="close_approach_data[0].close_approach_date" display-name="Approach date" > </th>
 					    <th field-name="close_approach_data[0].relative_velocity.kilometers_per_second" display-name="Speed in km/sec" display-align="center"></th>  					    
-   					    <th field-name="nasa_jpl_url" display-name="More details" display-align="center">
-						    <div ng-click="{nasa_jpl_url}"> </div>
-					    </th>					
+   					    <th field-name="nasa_jpl_url" display-name="More details" display-align="center"></th>					
 					</tr>
 				    </thead>
+				    <tbody>
+				    <tr>
+				      <td field-name="nasa_jpl_url"><a href="{{nasa_jpl_url}}"/>{{gnasa_jpl_url}}</td>
+				    </tr>
+				  </tbody>
 			</table>
 			
 			<!-- <p>The ID is {{neo.near_earth_objects}}</p> 
