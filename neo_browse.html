@@ -1,15 +1,18 @@
 <!doctype html>
-<html ng-app="demo">
-	<head>
-		<title>Hello AngularJS</title>
-		 <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script> -->
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/slate/bootstrap.min.css"/>
-		<link rel="stylesheet" href="trNgGrid.css" />
+<html ng-app="demo"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.0.3/slate/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="//moonstorm.github.io/trNgGrid/release/trNgGrid.min.css" rel="stylesheet" type="text/css"/>
 
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.1/angular.js"></script>  
-		<script src="trNgGrid.min.js"></script>
-    	<!-- <script src="hello.js"></script> -->
- 	<script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-route.min.js"></script>
+        <script src="//moonstorm.github.io/trNgGrid/release/trNgGrid.min.js"></script>
+
+        <script>
 		angular.module('demo', [])
                     .controller('Hello', function($scope, $http) {
                         $http.get('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key=DEMO_KEY').
@@ -20,9 +23,8 @@
 		});
 		angular.module("demo", ["trNgGrid"]);
 	</script>
-	</head>
-
-	<body>
+    </head>
+<body>
 		<div ng-controller="Hello">
 			<ul >
     				<li ng-repeat="item in neo.near_earth_objects"> {{ item.nasa_jpl_url }} </li>
@@ -44,4 +46,11 @@
 			<img src="{{greeting.hdurl}}" />
 		</div>
 	</body>
+    <!-- <body class="container">
+      <div ng-controller="MainCtrl">
+          <table tr-ng-grid items='myItems'>
+          </table>
+      </div>
+    </body> -->
 </html>
+
