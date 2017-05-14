@@ -51,14 +51,19 @@
 					</tr>
 				    </thead>
 				    <tbody>
-			           <!--		    
+			           		    
 				    <tr>
-				      <td field-name="" display-name="Speed in km/sec" display-align="center"></td>  					    
-				    <td field-name='close_approach_data[0].relative_velocity.kilometers_per_second'>
+					<button class="btn btn-default" ng-click="alert('You clicked on ' + gridItem.name);$event.stopPropagation();">
+						Display {{gridDisplayItem.name}}
+			                    </button>
+				      <td field-name="nasa_jpl_url">
+					      <a href="{nasa_jpl_url}">Link</a>
+					    </td>  					    
+				    <!--<td field-name='close_approach_data[0].relative_velocity.kilometers_per_second'>
 			                        <div>{{gridItem.pastAddresses[1].Neighborhood}} <button href="#">hello{{index}}</button></div>
-                    			</td>
+                    			</td> -->
 				    </tr>
-					-->
+				
 				  </tbody> 
 			</table>
 			
