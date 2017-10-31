@@ -80,7 +80,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#interact">Applying for a Job</a></li>
+                <li class="active"><a href="#apply">Applying for a Job</a></li>
                 <li><a href="#photo">Writing a Resume</a></li>
                 <li><a href="#asteroid">Application Forms</a></li>
 		<li><a href="#asteroid">Presenting yourself</a></li>
@@ -210,157 +210,14 @@
 
       <hr class="featurette-divider">
 
-      <div class="row featurette" id="interact">
-        <h2 class="featurette-heading">Interactive Timeline <span class="text-muted"></span></h2>
-	<p>The interactive timeline displays the history of various space exploration and missions over the last 10 years </p>
+      <div class="row featurette" id="apply">
+        <h2 class="featurette-heading">Applying for a Job<span class="text-muted"></span></h2>
+	<p>Times have changed and increasingly we are finding people looking for new job opportunities.  No longer are people looking primarily at the newspaper want-ads to find their dream jobs. Job seekers are becoming more creative and utilizing new strategies in moving their careers forward. </p>
 	  <section flex flex-center>
             
 	    <div class="col-xs-6 col-md-10" id="chart"></div>
          </section>
-	<script id="code">
-        'use strict';
-        const element = document.getElementById('chart');
-	
-	const data = [{
-            label: 'NASA',
-            data: [
-	    {
-                label: 'First NASA Launch of Pioneer One',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1954, 10, 11]),
-                to: new Date([1958, 12, 11]),
-		customClass: 'blue-interval'
-             }, {
-                label: 'First American Spacewalk',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1961, 6, 3]),
-                to: new Date([1965, 6, 4]),
-		customClass: 'blue-interval'
-	      }, {
-                label: 'Apollo 8 lauches and circumnavigates the moon with a 3 manned crew',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1965, 12, 21]),
-                to: new Date([1968, 12, 27]),
-		customClass: 'blue-interval'
-	     }, {
-                label: 'Apollo 14 lands on the moon',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1969, 5, 2]),
-                to: new Date([1971, 5, 3]),
-		customClass: 'blue-interval'
-	     }, {
-                label: 'Space Shuttle Challenger explodes',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1980, 1, 28]),
-                to: new Date([1986, 1, 29]),
-		customClass: 'blue-interval'
-	     } 
-	/*	,{
-                type: TimelineChart.TYPE.POINT,
-                at: new Date([2016, 10, 1]),
-                customClass: 'blue-dot'
-            }*/]
-        }, {
-            label: 'MISSION',
-            data: [
-	     {
-                label: 'First Human to enter space',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1955, 4, 12]),
-                to: new Date([1961, 4, 13]),
-		customClass: 'red-interval'
-              }, {
-                label: 'Surveyor lands on the moon',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1962, 6, 16]),
-                to: new Date([1966, 6, 17]),
-		customClass: 'red-interval'
-	      }, {
-                label: 'First Walk on the moon',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1966, 12, 28]),
-                to: new Date([1969, 7, 24]),
-		customClass: 'red-interval'
-	     }, {
-                label: 'Magellan mapped out Venus atmosphere',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1981, 5, 15]),
-                to: new Date([1989, 5, 16]),
-		customClass: 'red-interval'
-	     }, {
-                label: 'First flight of Space shuttle Endeavour',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1989, 6, 18]),
-                to: new Date([1992, 5, 3]),
-		customClass: 'red-interval'
-	     }, {
-                label: 'Observes Jupiter and Saturn',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1992, 6, 1]),
-                to: new Date([1995, 1, 2]),
-		customClass: 'red-interval'
-	     }]
-        }, {
-            label: 'TIMELINE',
-            data: [{
-                label: 'Launch of Friendship 7',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1961, 2, 20]),
-                to: new Date([1962, 2, 21]),
-		customClass: 'green-interval'
-	        }, 
-		{
-                label: 'Final Flight of the Gemini Program',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1966, 6, 15]),
-                to: new Date([1966, 11, 16]),
-		customClass: 'green-interval'
-	      }, {
-                label: 'Viking One landed on Mars',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1973, 8, 20]),
-                to: new Date([1976, 8, 21]),
-		customClass: 'green-interval'
-	     },{
-                label: 'Cassini Space Probe left earth, bound for Saturn',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1995, 10, 15]),
-                to: new Date([1997, 10, 16]),
-		customClass: 'green-interval'
-	     }, {
-                label: 'First permanent crew moved to the International Space Station',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([1998, 1, 2]),
-                to: new Date([2000, 1, 3]),
-		customClass: 'green-interval'
-	     }, {
-                label: 'Mars Phoenix probe joins 2 rovers',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([2005, 5, 25]),
-                to: new Date([2008, 5, 26]),
-		customClass: 'green-interval'
-	     },{
-                label: 'Phoenix confirms the presence of water on Mars',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([2008, 5, 27]),
-                to: new Date([2008, 7, 2]),
-		customClass: 'green-interval'
-	     }, {
-                label: 'Last Mission of Space shuttle, STS-135',
-                type: TimelineChart.TYPE.INTERVAL,
-                from: new Date([2009, 7, 20]),
-                to: new Date([2011, 7, 21]),
-		customClass: 'green-interval'		    
-            }]
-        }];
-	
-        const timeline = new TimelineChart(element, data, {
-            enableLiveTimer: true,
-            tip: function(d) {
-                return d.at || `${d.from}<br>${d.to}`;
-            }
-        }).onVizChange(e => console.log(e));
-    </script>
+
         <div class="col-md-5 col-md-pull-7">
           <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
