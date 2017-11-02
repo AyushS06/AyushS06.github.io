@@ -26,32 +26,6 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-    	<!-- <script src="hello.js"></script> -->
- 	   <script>
-		var rightNow = new Date();
-                var res = rightNow.toISOString().slice(0,10);
-
-		//alert(res);
-		   
-		angular.module('demo', [])
-                    .controller('Hello', function($scope, $http) {
-                        $http.get('https://api.nasa.gov/planetary/apod?api_key=16zpS6CCNX5jXE83MCt3nAEOEj7oLQ0Lsu5BbLHk').
-                        then(function(response) {
-                       $scope.apod = response.data;
-        	});
-		});
-	</script>
-	    
-
-
-    
-    <!-- Time line -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.css" />
-    <link rel="stylesheet" href="https://rawgithub.com/Caged/d3-tip/master/examples/example-styles.css" />
-    <link rel="stylesheet" href="/d3-timeline-master/dist/timeline-chart.css" />
-    <link rel="stylesheet" href="/d3-timeline-master/example/style.css" /> 
 	  
 	  <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
