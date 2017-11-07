@@ -12,9 +12,7 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-.glyphicon-check:before {
-    content: "\e067";
-}
+
 .navbar-wrapper {
   position: absolute;
   top: 0;
