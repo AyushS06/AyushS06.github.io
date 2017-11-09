@@ -42,10 +42,10 @@ console.log(educationNest);
 
 
 
-// var layout = d3.layout.pack()
-// 	.value(function (d) { return d.count })
-// 	.size([width, height])
-// 	.padding(3);
+ var layout = d3.layout.pack()
+ 	.value(function (d) { return d.count })
+ 	.size([width, height])
+ 	.padding(3);
 // 
 // var happyColorScale = d3.scale.ordinal()
 // 	.domain([true, false, undefined])
