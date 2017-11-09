@@ -1,0 +1,84 @@
+{
+	"bio": {
+		"firstName": "Ian",
+		"lastName": "Kronquist",
+		"email": {
+			"work": "iankronquist@osuosl.org",
+			"personal": "iankronquist@gmail.com"
+		},
+		"summary": "Enthusiastic and experienced student of computer science, enjoys solving the difficult problems which make the field fascinating. A quick learner, eager to apply new concepts and technologies.",
+		"location": {
+			"city": "Corvallis",
+			"countryCode": "US",
+			"state": "Oregon"
+		},
+		"profiles": {
+			"github": "github.com/iankronquist"
+		}
+	},
+	"work": [
+		{
+			"company": "Mozilla",
+			"position": "Summer Intern",
+			"website": "mozilla.org",
+			"startDate": "2014-06-30",
+			"endDate": "2014-08-21",
+			"summary": "Web engineer for input.mozilla.org. Wrote a Bayesian spam detection and filtering system for a Python Django web application as well as data visualizations of user feedback using Javascript and D3.js."
+		},
+		{
+			"company": "Oregon State University Open Source Lab",
+			"position": "Developer",
+			"website": "osuosl.org",
+			"startDate": "2014-11-10",
+			"endDate": "2014-06-13",
+			"summary": "Wrote web back-end and deployment scripts for the Oregon Virtual School Districts websites. Designed and began implementing power supply management software for the lab's production data center.  Contributed to Ganeti Web Manager Virtual Machine management software. Used Python, Flask, and Chef."
+		},
+		{
+			"company": "Reach Technology",
+			"position": "Summer Intern",
+			"website": "osuosl.org",
+			"startDate": "2013-07-22",
+			"endDate": "2014-09-27",
+			"summary": "Wrote software for the customer development kit for a graphics display module running Linux. Wrote the company product wiki and documentation. Created customer video tutorials. Used C++, the Qt Framework, and QML languages"
+		},
+		{
+			"company": "Village Home Education Resource Center",
+			"position": "Board Member and Student Representative",
+			"website": "villagehome.org",
+			"startDate": "2011-09",
+			"endDate": "2012-06",
+			"summary": "Represented the student body of a Beaverton based education non-profit. Was a member of the Technology Committee and the Finance Committee."
+		}
+	],
+	"education": [{
+		"institution": "Oregon State University",
+		"area": "Corvallis, Oregon",
+		"studyType": "Computer Science undergraduate",
+		"startDate": "2013-09-21",
+		"endDate": ""
+	},
+	{
+		"institution": "AFS Turkey",
+		"area": "Adana, Turkey",
+		"studyType": "International Study Abroad Program",
+		"startDate": "2012-09-21",
+		"endDate": "2013-07-11"
+	}
+	],
+	"awards": [{
+		"title": "Eagle Scout",
+		"awardDate": "2013-08",
+		"awarder": "The Boy Scouts of America"
+	}],
+	"skills": [{
+		"name": "Turkish Language",
+		"level": "Proficient"
+	}],
+	"hobbies": [{
+		"name": "string",
+		"keywords": [
+			"string"
+		]
+	}],
+	"references": "Please contact for references."
+}
