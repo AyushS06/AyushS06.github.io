@@ -47,16 +47,16 @@ console.log(educationNest);
  	.size([width, height])
  	.padding(3);
 // 
-// var happyColorScale = d3.scale.ordinal()
-// 	.domain([true, false, undefined])
-// 	.range(["#76B472", "#D76058", "none"]);
-// 
-// var textSizeScale = d3.scale.linear()
-// 	.domain([25, 100])
-// 	.range([0.5, 1.0])
-// 	.clamp(true);
-// 
-// var productHappitude = [];
+ var happyColorScale = d3.scale.ordinal()
+ 	.domain([true, false, undefined])
+ 	.range(["#76B472", "#D76058", "none"]);
+ 
+ var textSizeScale = d3.scale.linear()
+ 	.domain([25, 100])
+ 	.range([0.5, 1.0])
+ 	.clamp(true);
+ 
+var productHappitude = [];
 
 function resize() {
 	height = window.innerHeight;
