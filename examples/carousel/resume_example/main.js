@@ -1,4 +1,4 @@
-"use strict"; // well this is stupid
+// "use strict"; // well this is stupid
 var apiUrl = "https://AyushS06.github.io/examples/carousel/resume_example/resume.json"
 var height = window.innerHeight;
 var width = window.innerWidth;
