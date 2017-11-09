@@ -57,6 +57,8 @@ console.log(educationNest);
  	.clamp(true);
  
 var productHappitude = [];
+var educationNestData =[];
+var workNestData =[];
 
 function resize() {
 	height = window.innerHeight;
