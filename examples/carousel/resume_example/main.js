@@ -104,8 +104,8 @@ d3.json(apiUrl, function(error, data) {
 	console.log(data.work);
 	console.log(educationNest)
 	console.log(educationNest.map(data.work, d3.map).values());
-	educationNestData = educationNest.map(data.work, d3.map).values();
-	console.log(educationNest)
+	// educationNestData = educationNest.map(data.work, d3.map).values();
+	// console.log(educationNest)
 	workNestData = workNest.map(data.education, d3.map).values();
 	//draw(workNestData, educationNestData);
 });
