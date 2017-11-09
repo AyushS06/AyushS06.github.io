@@ -1,5 +1,5 @@
 "use strict"; // well this is stupid
-var apiUrl = "https://gist.githubusercontent.com/iankronquist/c26f0c211aaf39b1fad9/raw/d957ab4bfe60c97945ee2c5bc9e1c16c0965875c/resume.json"
+var apiUrl = "resume.json"
 var height = window.innerHeight;
 var width = window.innerWidth;
 
