@@ -1,1265 +1,488 @@
-/*
-  Theme Name: DevFolio
-  Theme URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-  Author: BootstrapMade.com
-  License: https://bootstrapmade.com/license/
-*/
-
-/*======================================
-//--//-->   STYLES GENERALES
-======================================*/
-
-body {
-  background-color: #f5f5f5;
-  color: #4e4e4e;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #1e1e1e;
-}
-
-a {
-  color: #1e1e1e;
-  transition: all 0.5s ease-in-out;
-}
-
-a:hover {
-  color: #f0642d;
-  text-decoration: none;
-  transition: all 0.5s ease-in-out;
-}
-
-.p-r {
-  position: relative;
-}
-
-.color-a {
-  color: #f0642d;
-}
-
-.color-d {
-  color: #f5f5f5;
-}
-
-.color-text-a {
-  color: #4e4e4e;
-}
-
-.box-shadow,
-.paralax-mf,
-.service-box,
-.work-box,
-.card-blog {
-  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
-}
-
-.box-shadow-a,
-.button:hover {
-  box-shadow: 0 0 0 4px #faded3;
-}
-
-.display-5 {
-  font-size: 2.5rem;
-  font-weight: 300;
-  line-height: 1.1;
-}
-
-.display-6 {
-  font-size: 2rem;
-  font-weight: 300;
-  line-height: 1.1;
-}
-
-.avatar {
-  width: 32px;
-  height: 32px;
-  margin-right: 4px;
-  overflow: hidden;
-}
-
-.bg-image {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-}
-
-.overlay-mf {
-  background-color: #f0642d;
-}
-
-.overlay-mf {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .7;
-}
-
-.paralax-mf {
-  position: relative;
-  padding: 8rem 0;
-}
-
-.display-table {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-/*--/ Sections /--*/
-
-.sect-4 {
-  padding: 4rem 0;
-}
-
-.sect-pt4 {
-  padding-top: 4rem;
-}
-
-.sect-mt4 {
-  margin-top: 4rem;
-}
-
-/*--/ Title s /--*/
-
-.title-s {
-  font-weight: 600;
-  color: #1e1e1e;
-  font-size: 1.1rem;
-}
-
-/*--/ Title A /--*/
-
-.title-box {
-  margin-bottom: 4rem;
-}
-
-.title-a {
-  font-size: 3rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.subtitle-a {
-  color: #4e4e4e;
-}
-
-.line-mf {
-  width: 40px;
-  height: 5px;
-  background-color: #f0642d;
-  margin: 0 auto;
-}
-
-/*--/ Title Left /--*/
-
-.title-box-2 {
-  margin-bottom: 3rem;
-}
-
-.title-left {
-  font-size: 2rem;
-  position: relative;
-}
-
-.title-left:before {
-  content: '';
-  position: absolute;
-  height: 3px;
-  background-color: #f0642d;
-  width: 100px;
-  bottom: -12px;
-}
-
-/*------/ Box /------*/
-
-.box-pl2 {
-  padding-left: 2rem;
-}
-
-.box-shadow-full {
-  padding: 3rem 1.25rem;
-  position: relative;
-  background-color: #fff;
-  margin-bottom: 3rem;
-  z-index: 2;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-/*------/ Socials /------*/
-
-.socials {
-  padding: 1.5rem 0;
-}
-
-.socials ul li {
-  display: inline-block;
-}
-
-.socials .ico-circle {
-  height: 40px;
-  width: 40px;
-  font-size: 1.7rem;
-  border-radius: 50%;
-  line-height: 1.4;
-  margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #f0642d;
-  transition: all 500ms ease;
-}
-
-.socials .ico-circle:hover {
-  background-color: #f0642d;
-  color: #fff;
-  box-shadow: 0 0 0 3px #faded3;
-  transition: all 500ms ease;
-}
-
-/*------/ Ul resect /------*/
-
-.ul-resect,
-.socials ul,
-.list-ico,
-.blog-wrapper .post-meta ul,
-.box-comments .list-comments,
-.widget-sidebar .list-sidebar,
-.widget-tags ul {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
-
-.list-ico {
-  line-height: 2;
-}
-
-.list-ico span {
-  color: #f0642d;
-  margin-right: 10px;
-}
-
-/*------/ Ico Circle /------*/
-
-.ico-circle {
-  height: 100px;
-  width: 100px;
-  font-size: 2rem;
-  border-radius: 50%;
-  line-height: 1.55;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: 0 0 0 10px #f0642d;
-  display: block;
-}
-
-/*------/ Owl Carousel /------*/
-
-.owl-theme .owl-dots {
-  text-align: center;
-  margin-top: 18px;
-}
-
-.owl-theme .owl-dots .owl-dot {
-  display: inline-block;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  width: 18px;
-  height: 7px;
-  margin: 5px 5px;
-  background: #faded3;
-  border: 0px solid #faded3;
-  display: block;
-  transition: all 0.6s ease-in-out;
-  cursor: pointer;
-}
-
-.owl-theme .owl-dots .owl-dot:hover span {
-  background-color: #faded3;
-}
-
-.owl-theme .owl-dots .owl-dot.active span {
-  background-color: #1B1B1B;
-  width: 25px;
-}
-
-/*--/ Scrolltop s /--*/
-
-.scrolltop-mf {
-  position: relative;
-  display: none;
-}
-
-.scrolltop-mf span {
-  z-index: 999;
-  position: fixed;
-  width: 42px;
-  height: 42px;
-  background-color: #f0642d;
-  opacity: .7;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  text-align: center;
-  color: #fff;
-  top: auto;
-  left: auto;
-  right: 30px;
-  bottom: 50px;
-  cursor: pointer;
-  border-radius: 50%;
-}
-
-/* Back to top button */
-
-.back-to-top {
-  position: fixed;
-  display: none;
-  background: #f0642d;
-  color: #fff;
-  width: 44px;
-  height: 44px;
-  text-align: center;
-  line-height: 1;
-  font-size: 16px;
-  border-radius: 50%;
-  right: 15px;
-  bottom: 15px;
-  transition: background 0.5s;
-  z-index: 11;
-}
-
-.back-to-top i {
-  padding-top: 12px;
-  color: #fff;
-}
-
-/* Prelaoder */
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #f2f2f2;
-  border-top: 6px solid #f0642d;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  -webkit-animation: animate-preloader 1s linear infinite;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@-webkit-keyframes animate-preloader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-preloader {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-/*======================================
-//--//-->   NAVBAR
-======================================*/
-
-.navbar-b {
-  transition: all .5s ease-in-out;
-  background-color: transparent;
-  padding-top: 1.563rem;
-  padding-bottom: 1.563rem;
-}
-
-.navbar-b.navbar-reduce {
-  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-}
-
-.navbar-b.navbar-trans .nav-item,
-.navbar-b.navbar-reduce .nav-item {
-  position: relative;
-  padding-right: 10px;
-  padding-left: 0;
-}
-
-.navbar-b.navbar-trans .nav-link,
-.navbar-b.navbar-reduce .nav-link {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.navbar-b.navbar-trans .nav-link:before,
-.navbar-b.navbar-reduce .nav-link:before {
-  content: '';
-  position: absolute;
-  margin-left: 0px;
-  width: 0%;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  transition: all 500ms ease;
-}
-
-.navbar-b.navbar-trans .nav-link:hover,
-.navbar-b.navbar-reduce .nav-link:hover {
-  color: #1B1B1B;
-}
-
-.navbar-b.navbar-trans .nav-link:hover:before,
-.navbar-b.navbar-reduce .nav-link:hover:before {
-  width: 35px;
-}
-
-.navbar-b.navbar-trans .show > .nav-link:before,
-.navbar-b.navbar-trans .active > .nav-link:before,
-.navbar-b.navbar-trans .nav-link.show:before,
-.navbar-b.navbar-trans .nav-link.active:before,
-.navbar-b.navbar-reduce .show > .nav-link:before,
-.navbar-b.navbar-reduce .active > .nav-link:before,
-.navbar-b.navbar-reduce .nav-link.show:before,
-.navbar-b.navbar-reduce .nav-link.active:before {
-  width: 35px;
-}
-
-.navbar-b.navbar-trans .nav-link:before {
-  background-color: #fff;
-}
-
-.navbar-b.navbar-trans .nav-link:hover {
-  color: #fff;
-}
-
-.navbar-b.navbar-trans .show > .nav-link,
-.navbar-b.navbar-trans .active > .nav-link,
-.navbar-b.navbar-trans .nav-link.show,
-.navbar-b.navbar-trans .nav-link.active {
-  color: #fff;
-}
-
-.navbar-b.navbar-reduce {
-  transition: all .5s ease-in-out;
-  background-color: #fff;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.navbar-b.navbar-reduce .nav-link {
-  color: #f0642d;
-}
-
-.navbar-b.navbar-reduce .nav-link:before {
-  background-color: #f0642d;
-}
-
-.navbar-b.navbar-reduce .nav-link:hover {
-  color: #f0642d;
-}
-
-.navbar-b.navbar-reduce .show > .nav-link,
-.navbar-b.navbar-reduce .active > .nav-link,
-.navbar-b.navbar-reduce .nav-link.show,
-.navbar-b.navbar-reduce .nav-link.active {
-  color: #f0642d;
-}
-
-.navbar-b.navbar-reduce .navbar-brand {
-  color: #f0642d;
-}
-
-.navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #1B1B1B;
-}
-
-.navbar-b .navbar-brand {
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 600;
-}
-
-.navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
-.navbar-b .dropdown.show .dropdown-menu,
-.navbar-b .dropdown-btn.show .dropdown-menu {
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-  visibility: visible !important;
-}
-
-.navbar-b .dropdown-menu {
-  margin: 1.12rem 0 0;
-  border-radius: 0;
-}
-
-.navbar-b .dropdown-menu .dropdown-item {
-  padding: .7rem 1.7rem;
-  transition: all 500ms ease;
-}
-
-.navbar-b .dropdown-menu .dropdown-item:hover {
-  background-color: #f0642d;
-  color: #fff;
-  transition: all 500ms ease;
-}
-
-.navbar-b .dropdown-menu .dropdown-item.active {
-  background-color: #f0642d;
-}
-
-/*--/ Hamburger Navbar /--*/
-
-.navbar-toggler {
-  position: relative;
-}
-
-.navbar-toggler:focus,
-.navbar-toggler:active {
-  outline: 0;
-}
-
-.navbar-toggler span {
-  display: block;
-  background-color: #fff;
-  height: 3px;
-  width: 25px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
-  left: 0;
-  opacity: 1;
-}
-
-.navbar-toggler span:nth-child(1),
-.navbar-toggler span:nth-child(3) {
-  transition: -webkit-transform .35s ease-in-out;
-  transition: transform .35s ease-in-out;
-  transition: transform .35s ease-in-out, -webkit-transform .35s ease-in-out;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(1) {
-  position: absolute;
-  left: 12px;
-  top: 10px;
-  -webkit-transform: rotate(135deg);
-  transform: rotate(135deg);
-  opacity: 0.9;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(2) {
-  height: 12px;
-  visibility: hidden;
-  background-color: transparent;
-}
-
-.navbar-toggler:not(.collapsed) span:nth-child(3) {
-  position: absolute;
-  left: 12px;
-  top: 10px;
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-135deg);
-  opacity: 0.9;
-}
-
-/*======================================
-//--//-->   INTRO
-======================================*/
-
-.intro {
-  height: 100vh;
-  position: relative;
-  color: #fff;
-}
-
-.intro .intro-content {
-  text-align: center;
-  position: absolute;
-}
-
-.intro .overlay-itro {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  top: 0;
-  left: 0px;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  opacity: .9;
-}
-
-.intro .intro-title {
-  color: #fff;
-  font-weight: 600;
-  font-size: 3rem;
-}
-
-.intro .intro-subtitle {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.intro .text-slider-items {
-  display: none;
-}
-
-.intro-single {
-  height: 350px;
-}
-
-.intro-single .intro-content {
-  margin-top: 30px;
-}
-
-.intro-single .intro-title {
-  text-transform: uppercase;
-  font-size: 3rem;
-}
-
-.intro-single .breadcrumb {
-  background-color: transparent;
-  color: #f0642d;
-}
-
-.intro-single .breadcrumb .breadcrumb-item:before {
-  color: #faded3;
-}
-
-.intro-single .breadcrumb .breadcrumb-item.active {
-  color: #faded3;
-}
-
-.intro-single .breadcrumb a {
-  color: #fff;
-}
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-.skill-mf span {
-  color: #4e4e4e;
-}
-
-.skill-mf .progress {
-  background-color: #faded3;
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #f0642d;
-}
-
-/*======================================
-//--//-->   SERVICES
-======================================*/
-
-.service-box {
-  background-color: #fff;
-  padding: 2.5rem 1.3rem;
-  border-radius: 1rem;
-  margin-bottom: 3rem;
-}
-
-.service-box:hover .ico-circle {
-  transition: all 500ms ease;
-  color: #fff;
-  background-color: #f0642d;
-  box-shadow: 0 0 0 10px #faded3;
-}
-
-.service-box .service-ico {
-  margin-bottom: 1rem;
-  color: #1e1e1e;
-}
-
-.service-box .ico-circle {
-  transition: all 500ms ease;
-  font-size: 4rem;
-}
-
-.service-box .s-title {
-  font-size: 1.4rem;
-  text-transform: uppercase;
-  text-align: center;
-  padding: .4rem 0;
-}
-
-.service-box .s-description {
-  color: #4e4e4e;
-}
-
-/*======================================
-//--//-->   COUNTER
-======================================*/
-
-.counter-box {
-  color: #fff;
-  text-align: center;
-}
-
-.counter-ico {
-  margin-bottom: 1rem;
-}
-
-.counter-ico .ico-circle {
-  height: 60px;
-  width: 60px;
-  line-height: 1.8;
-  box-shadow: 0 0 0 10px #faded3;
-}
-
-.counter-num .counter {
-  font-size: 2rem;
-  margin-bottom: 0;
-}
-
-/*======================================
-//--//-->   PORTFOLIO
-======================================*/
-
-.work-box {
-  margin-bottom: 3rem;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background-color: #fff;
-}
-
-.work-box:hover img {
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
-}
-
-.work-img {
-  display: block;
-  overflow: hidden;
-}
-
-.work-img img {
-  transition: all 1s;
-}
-
-.work-content {
-  padding: 2rem 3% 1rem 4%;
-}
-
-.work-content .w-more {
-  color: #4e4e4e;
-  font-size: .8rem;
-}
-
-.work-content .w-more .w-ctegory {
-  color: #f0642d;
-}
-
-.work-content .w-like {
-  font-size: 2.5rem;
-  color: #f0642d;
-  float: right;
-}
-
-.work-content .w-like a {
-  color: #f0642d;
-}
-
-.work-content .w-like .num-like {
-  font-size: .7rem;
-}
-
-.w-title {
-  font-size: 1.2rem;
-}
-
-/*======================================
-//--//-->   TESTIMONIALS
-======================================*/
-
-.testimonials .owl-carousel .owl-item img {
-  width: auto;
-}
-
-.testimonial-box {
-  color: #fff;
-  text-align: center;
-}
-
-.testimonial-box .author-test {
-  margin-top: 1rem;
-}
-
-.testimonial-box .author-test img {
-  margin: 0 auto;
-}
-
-.testimonial-box .author {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 600;
-  margin: 1rem 0;
-  display: block;
-  font-size: 1.4rem;
-}
-
-.testimonial-box .comit {
-  font-size: 2rem;
-  color: #f0642d;
-  background-color: #fff;
-  width: 52px;
-  height: 52px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 50%;
-  line-height: 1.6;
-}
-
-/*======================================
-//--//-->   BLOG
-======================================*/
-
-.card-blog .card-body {
-  position: relative;
-}
-
-.card-blog .card-category-box {
-  position: absolute;
-  text-align: center;
-  top: -16px;
-  left: 15px;
-  right: 15px;
-  line-height: 25px;
-  overflow: hidden;
-}
-
-.card-blog .card-category {
-  display: inline-block;
-  color: #fff;
-  padding: 0 15px 5px;
-  overflow: hidden;
-  background-color: #f0642d;
-  border-radius: 4px;
-}
-
-.card-blog .card-category .category {
-  color: #fff;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: .7rem;
-  letter-spacing: .1px;
-  margin-bottom: 0;
-}
-
-.card-blog .card-title {
-  font-size: 1.3rem;
-  margin-top: .6rem;
-}
-
-.card-blog .card-description {
-  color: #4e4e4e;
-}
-
-.card-blog .post-author {
-  display: inline-block;
-}
-
-.card-blog .post-date {
-  color: #4e4e4e;
-  display: inline-block;
-  float: right;
-}
-
-/*======================================
-//--//-->   BLOG-SINGLE
-======================================*/
-
-.post-box,
-.form-comments,
-.box-comments,
-.widget-sidebar {
-  padding: 2rem;
-  background-color: #fff;
-  margin-bottom: 3rem;
-}
-
-.blog-wrapper .article-title {
-  font-size: 1.5rem;
-}
-
-.blog-wrapper .post-meta {
-  margin: 1rem 0;
-}
-
-.blog-wrapper .post-meta ul {
-  border-left: 4px solid #f0642d;
-  margin-top: 1rem;
-}
-
-.blog-wrapper .post-meta ul li {
-  display: inline-block;
-  margin-left: 15px;
-}
-
-.blog-wrapper .post-meta ul a {
-  color: #f0642d;
-}
-
-.blog-wrapper .post-meta ul span {
-  color: #1e1e1e;
-}
-
-.blog-wrapper .blockquote {
-  border-left: 4px solid #f0642d;
-  padding: 18px;
-  font-style: italic;
-}
-
-/*------/ Comments /------*/
-
-.box-comments .list-comments li {
-  padding-bottom: 40px;
-}
-
-.box-comments .list-comments .comment-avatar {
-  display: table-cell;
-  vertical-align: top;
-}
-
-.box-comments .list-comments .comment-avatar img {
-  width: 80px;
-  height: 80px;
-}
-
-.box-comments .list-comments .comment-author {
-  font-size: 1.3rem;
-}
-
-.box-comments .list-comments .comment-details {
-  display: table-cell;
-  vertical-align: top;
-  padding-left: 25px;
-}
-
-.box-comments .list-comments a {
-  color: #f0642d;
-}
-
-.box-comments .list-comments span {
-  color: #1e1e1e;
-  font-style: italic;
-}
-
-.box-comments .comment-children {
-  margin-left: 40px;
-}
-
-/*------/ Sidebar /------*/
-
-.widget-sidebar .sidebar-title {
-  font-size: 1.6rem;
-  font-weight: 600;
-  border-left: 5px solid #f0642d;
-  padding-left: 15px;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-}
-
-.widget-sidebar .list-sidebar li {
-  position: relative;
-  padding: 6px 0 6px 24px;
-}
-
-.widget-sidebar .list-sidebar li:before {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 1px;
-  left: 0;
-  background-color: #f0642d;
-  top: 20px;
-}
-
-.sidebar-search input {
-  background-color: #fff;
-  border-radius: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-.sidebar-search .btn-search {
-  background-color: #f0642d;
-  border-color: #f0642d;
-  border-radius: 0;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.widget-tags ul li {
-  display: inline-block;
-  background-color: #f0642d;
-  padding: .2rem .6rem;
-  margin-bottom: .5rem;
-  border-radius: 15px;
-}
-
-.widget-tags ul li a {
-  color: #fff;
-}
-
-/*======================================
-//--//-->   CONTACT
-======================================*/
-
-.footer-paralax {
-  padding: 4rem 0 0 0;
-}
-
-.contact-mf {
-  margin-top: 4rem;
-}
-
-/*======================================
-//--//-->   FOOTER
-======================================*/
-
-footer {
-  text-align: center;
-  color: #fff;
-  padding-bottom: 4rem;
-}
-
-footer .copyright {
-  margin-bottom: .3rem;
-}
-
-footer .credits {
-  margin-bottom: 0;
-}
-
-footer .credits a {
-  color: #fff;
-}
-
-/*======================================
-//--//-->   CONtaCT FORM
-======================================*/
-
-#sendmessage {
-  color: #f0642d;
-  border: 1px solid #f0642d;
-  display: none;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-#errormessage {
-  color: red;
-  display: none;
-  border: 1px solid red;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-#sendmessage.show,
-#errormessage.show,
-.show {
-  display: block;
-}
-
-.validation {
-  color: red;
-  display: none;
-  margin: 0 0 20px;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-/*======================================
-//--//-->   BUTTON
-======================================*/
-
-.button {
-  display: inline-block;
-  padding: .3rem .6rem;
-  text-align: center;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  font-size: 1rem;
-  border-radius: .3rem;
-  border: 1px solid transparent;
-  transition: all 500ms ease;
-  cursor: pointer;
-}
-
-.button:focus {
-  outline: 0;
-}
-
-.button:hover {
-  background-color: #db4a10;
-  color: #fff;
-  transition: all 500ms ease;
-}
-
-.button-a {
-  background-color: #f0642d;
-  color: #fff;
-  border-color: #faded3;
-}
-
-.button-big {
-  padding: .9rem 2.3rem;
-  font-size: 1.2rem;
-}
-
-.button-rouded {
-  border-radius: 5rem;
-}
-
-.btn-lg {
-  padding: .5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: .3rem;
-}
-
-@media (min-width: 577px) {
-  .counter-box {
-    margin-bottom: 1.8rem;
-  }
-}
-
-@media (min-width: 767px) {
-  .about-mf .box-pl2 {
-    margin-top: 3rem;
-    padding-left: 0rem;
-  }
-
-  .card-blog {
-    margin-bottom: 3rem;
-  }
-
-  .contact-mf .box-pl2 {
-    margin-top: 3rem;
-    padding-left: 0rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .box-shadow-full {
-    padding: 3rem;
-  }
-
-  .navbar-b.navbar-trans .nav-item,
-  .navbar-b.navbar-reduce .nav-item {
-    padding-left: 10px;
-  }
-
-  .navbar-b.navbar-trans .nav-link:before,
-  .navbar-b.navbar-reduce .nav-link:before {
-    margin-left: 18px;
-  }
-
-  .intro .intro-title {
-    font-size: 4.5rem;
-  }
-
-  .intro .intro-subtitle {
-    font-size: 2.5rem;
-  }
-
-  .intro-single .intro-title {
-    font-size: 3.5rem;
-  }
-
-  .testimonial-box .description {
-    padding: 0 5rem;
-  }
-
-  .post-box,
-  .form-comments,
-  .box-comments,
-  .widget-sidebar {
-    padding: 3rem;
-  }
-
-  .blog-wrapper .article-title {
-    font-size: 1.9rem;
-  }
-
-  .box-comments .list-comments .comment-author {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .testimonial-box .description {
-    padding: 0 8rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .testimonial-box .description {
-    padding: 0 13rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .back-to-top {
-    bottom: 15px;
-  }
-}
+<!DOCTYPE html>
+<html lang="en" ng-app="demo">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>How to Ace your Job Interview</title>
+    <link href="/images/branding/product/ico/googleg_lodp.ico" rel="shortcut icon">
+    <!-- Bootstrap core CSS -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+    <!-- <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script>
+      $('a.btn').on('click', function(e) {
+    e.preventDefault();
+    var url = $(this).attr('href');
+    $(".modal-body").html('<iframe width="100%" height="100%" frameborder="0" scrolling="no" allowtransparency="true" src="'+url+'"></iframe>');
+      });
+    </script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+      
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.7/d3-tip.min.js"></script>
+    <script src="/d3-timeline-master/dist/timeline-chart.js"></script>
+    
+    <div class="navbar-wrapper">
+      <div class="container"> 
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Getting a Job</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#applyforjob">Applying for a Job</a></li>
+                <li><a href="#write">Writing a Resume</a></li>
+                <li><a href="#appForms">Application Forms</a></li>
+    <li><a href="#presenting">Presenting yourself</a></li>
+    <li><a href="#tips">Tips to getting a Job</a></li>
+                <!--
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                   </ul>
+                </li>
+                -->
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox"> 
+        <div class="item active">
+          
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"> 
+          <div class="container">
+            <div class="carousel-caption">
+        <p> <font size="32">Build Solid Profile</font></p>
+              <p>Having a professional, eye-catching  profile is an excellent idea to make sure that you can be found by the right people at the right time. </p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="https://api.nasa.gov/index.html" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><font size="32">Getting Discovered</font></p>
+              <p>Use the power of Social sites and your networking skills to market your talent to the right opportunities</p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="https://api.nasa.gov/api.html#web-service-rate-limits" role="button">Learn more</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <p><font size="32">How to be a better Candidate?</font></p>
+              <p>As you might imagine, some candidates and job seekers don’t do themselves any favors during the hiring process.  They make mistakes that are very much avoidable, and those mistakes often eliminate them from serious consideration for better employment opportunities.</p>
+             <!-- <p><a class="btn btn-lg btn-primary" href="https://apod.nasa.gov/apod/astropix.html" role="button">See picture</a></p> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. --> 
+
+    <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+             <div class="jumbotron" id="applyforjob" >
+               <h1>Applying for a Job</h1>
+               <p>Times have changed and increasingly we are finding people looking for new job opportunities.  No longer are people looking primarily at the newspaper want-ads to find their dream jobs. Job seekers are becoming more creative and utilizing new strategies in moving their careers forward. </p>
+              <p><a class="btn btn-primary btn-lg" href="#apply" role="button">Learn more</a></p>
+             </div>
+    </div>
+  </div>
+    </div>
+    
+    <div class="container marketing" id="apply">
+      
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://thumb1.shutterstock.com/display_pic_with_logo/2820949/256473613/stock-photo-white-smart-phone-on-a-wooden-table-emitting-holographic-image-of-social-media-related-icons-256473613.jpg" alt="Generic placeholder image" width="140" height="140">
+    <h2>Social Media</h2>
+          <p>Networking can be done both in person and online. You can join professional associations, attend events for graduates of your school, or aim to connect with professionals who work in your field. Various online tools also exist, such as LinkedIn, which allow you to network with other professionals and learn about possible job openings.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://thumb1.shutterstock.com/display_pic_with_logo/2568958/439151773/stock-photo-person-writing-refer-a-friend-on-notebook-with-office-supplies-and-working-desk-background-439151773.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Referrals</h2>
+          <p>Referrals also come from individuals you know, however, this method may get you an invitation to apply for a position without actually searching for a new job. Some employers offer incentives to their employees for referring a successful candidate to their company – a win-win situation for everyone.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://thumb7.shutterstock.com/display_pic_with_logo/2117717/243539227/stock-photo-businessman-internet-online-job-search-application-concept-243539227.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Online Job Search</h2>
+          <p>Job boards were traditionally just that – boards posting vacancies and employment opportunities. Though some of these boards may still exist in a literal sense, many job boards have moved toward a virtual format. Often federal or state governments will provide job boards and job banks that job seekers can access. You can also use job search engines on the internet or the vast number of career-related websites that post job openings, such as Monster.com or CareerBuilder.com. </p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://thumb7.shutterstock.com/display_pic_with_logo/2117717/429578914/stock-photo-join-us-recruitment-application-follow-website-online-concept-429578914.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Company Websites</h2>
+          <p>If you already have your dream employer in mind, why not go directly to the career section of their website? If you watch for openings on their site, there's a chance you'll find just the opportunity that you've been waiting for. Create a list of employers that you'd like to work for and visit their websites often</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://thumb7.shutterstock.com/display_pic_with_logo/2117717/428064904/stock-photo-internship-management-temporary-position-concept-428064904.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Temping or Internships</h2>
+          <p>Sometimes temporary employment can lead to permanent positions. If you're without work, finding a temporary position with a great company is a great way to get a foot in the door, or provide you with useful business contacts to call upon in the future. Many recruitment agencies can assist with locating temporary or casual positions and contract work. Internships are a great choice for students who are just graduating from college and many schools' job placement services can connect students with opportunities. Volunteering can also be a great method for gaining valuable industry contacts.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="https://thumb7.shutterstock.com/display_pic_with_logo/2305238/414630034/stock-vector-vector-research-people-concept-of-human-resources-management-professional-staff-research-head-414630034.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Head Hunters and Recruitment Agencies</h2>
+          <p>If you're looking for some professional help in your job search, head hunters and recruitment agencies can definitely lend a hand (though in some cases it may come at a price). There are a number of organizations that hire through recruitment agencies because it helps to streamline the lengthy process of locating and interviewing candidates. Head hunters locate individuals to fill a specific vacancy within an organization or find a position for a job seeker who has hired their services.</p>
+          <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      <p class="pull-right"><a href="#">Back to top</a></p>
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider"> 
+      <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+             <div class="jumbotron" id="write" >
+               <h1>Writing a Professional Resume : <span class="text-muted">Tips and tricks</span></h1>
+               <p>Resumes are the visiting card to getting the job and should be able to shine light on your achievements and background</p>
+              <p><a class="btn btn-primary btn-lg" href="#writeresume" role="button">Learn more</a></p>
+             </div>
+    </div>
+  </div>
+     </div>
+      <div class="row featurette" id="writeresume">
+        <div class="col-md-6">
+    <h3 class="">What should be covered as part of a Resume?</h4>
+    <ul class="list-group">
+      <li class="list-group-item">
+      <h4 class="list-group-item-heading">Contact Information</h4>
+          <p class="list-group-item-text">Provide details about yourself including First and Last Name, Street Address City, State, Zip,  Phone (Cell/Home) and Email Address</p>
+      </li>
+      <li class="list-group-item">
+        <h4 class="list-group-item-heading">Career Summary</h4>
+                    <p class="list-group-item-text">A customized section of your resume that lists key achievements, skills, traits, and experience relevant to the position for which you are applying can serve dual purposes. It highlights your relevant experience and lets the prospective employer know that you have taken the time to create a resume that shows how you are qualified for the specific job.</p>
+      </li>
+      <li class="list-group-item">
+        <h4 class="list-group-item-heading">Education</h4>
+                  <p class="list-group-item-text">In the education section of your resume, list the schools you attended, the degrees you attained, and any special awards and honors you earned. 
+        College, Degree, Awards, Honors
+        </p>
+      </li>
+      <li class="list-group-item">
+        <h4 class="list-group-item-heading">Experience</h4>
+                  <p class="list-group-item-text">This section of your resume includes your work history. List the companies you worked for, dates of employment, the positions you held, and a bulleted list of responsibilities and achievements. Include
+      <br/>  
+      Company #1 <br/>
+      City, State<br/>
+      Dates Worked<br/>
+      Job Title <br/>
+      Responsibilities / Achievements <br/>
+        </p>
+      </li>
+      <li class="list-group-item">
+         <h4 class="list-group-item-heading">Awards and Certification</h4>
+                  <p class="list-group-item-text">Highlight any awards received for performance. Include relevant certifications achieved with details of year of completion </p>
+  
+      </li>
+      <li class="list-group-item">
+        <h4 class="list-group-item-heading">Publications</h4>
+                  <p class="list-group-item-text">Briefly describe your objective to highlight why you are suitable for the job</p>
+      </li>
+    </ul>   
+  </div>
+  <div class="col-md-6">
+    <h3>Resources to build your resume</h5>
+    <p><a class="btn btn-lg btn-primary" href="http://registry.jsonresume.org/" role="button">Click to test different styles of resume</a></p>
+    <div class="container-fluid no-padding">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="../../images/resume.png"  class="img-responsive" />
+          </div>
+        </div>
+      </div>
+    
+    
+        </div>
+      </div>
+      <br/>
+      <hr class="featurette-divider">
+      <br/>
+      <div class="col-md-12">
+       <h3>Interesting Examples of Resume from the Internet : </h5>
+       <img src="../../images/sample_resume.png"/>
+      </div>        
+      
+     <p class="pull-right"><a href="#">Back to top</a></p>
+   
+      
+       <hr class="featurette-divider">
+       <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="jumbotron" id="appForms" >
+               <h1>Completing Application Forms : <span class="text-muted">Tips and tricks</span></h1>
+               <p>It's important for your job applications to be complete, correct (no errors) and accurate. Here is the information you will need to complete an application for employment and tips and suggestions for writing applications that make a great impression.</p>
+             </div>
+    </div>
+  </div>
+     </div>
+     <div class="card text-white bg-dark mb-3 d-inline-block">
+        <div class="ht-tm-element card bg-primary text-white mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+              <h2 class="featurette-heading">Review Your Employment History<span class="text-muted"></span></h2>
+              <p>You'll need your resume or a list of your employment and education history to make sure that you're listing the correct dates of employment, job titles, and education. Your resume should match the job application perfectly - discrepancies will be noticed.</p>            </blockquote>
+          </div>
+        </div>
+      </div>
+      <div class="card text-white bg-dark mb-3 d-inline-block">
+        <div class="ht-tm-element card bg-primary text-white mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+              <h2 class="featurette-heading">Follow the Instructions<span class="text-muted"></span></h2>
+          <p>Follow the instructions when completing both online and paper job applications. Check the company web site or the fine print on the job application form for instructions, because the most important rule to remember when completing a job application is to follow the directions.</p>
+             </blockquote>       
+          </div>
+        </div>
+      </div>
+   
+      <div class="ht-tm-codeblock">
+        <div class="ht-tm-element card bg-primary text-white mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+                   <h2 class="featurette-heading">Review Before You Submit. <span class="text-muted"></span></h2>
+             <p>Thoroughly read the instructions for applying for employment - before you click the Submit button or turn in your application. The company will regard applications that are submitted correctly and accurately in a much better light than those from candidates who don't follow the instructions.</p>
+            </blockquote>      
+          </div>
+        </div>
+      </div>
+  
+       <div class="ht-tm-codeblock">
+        <div class="ht-tm-element card bg-primary text-white mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+                  <h2 class="featurette-heading">Be Prepared to Take a Test.<span class="text-muted"></span></h2>
+           <p>Some companies test applicants for employment to determine if the candidate is a good match for the jobs they are hiring for. Companies who conduct pre-employment tests (talent assessments) are seeking applicants that match their hiring criteria. Review advice on taking employment tests, so you're prepared to respond to the employment-related questions you may be asked. Companies also may require drug tests for applicants for employment.</p>
+            </blockquote>      
+          </div>
+        </div>
+     </div>
+      
+     <p class="pull-right"><a href="#">Back to top</a></p>      
+     <!-- Test end -->
+      <!-- Presenting Yourself Section -->      
+      <hr class="featurette-divider">
+       <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="jumbotron" id="presenting" >
+               <h1>Presenting Yourself : <span class="text-muted"> Tips and tricks </span></h1>
+               <p>Once you’ve gotten an invitation to interview, you’ve already impressed the potential employer—on paper. Now its time to present yourself well in the interview and to make a good impression</p>
+             </div>
+    </div>
+  </div>
+     </div>
+      <div class="ht-tm-codeblock">
+        <div class="ht-tm-element card bg-secondary text-success mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+                   <h2 class="featurette-heading">Do your research<span class="text-muted"></span></h2>
+             <p>Applicants who have researched the company they are applying to always make a good impression. Go beyond a cursory glance at their website: find out as much as possible about the organisation and its current projects, check the news for any issues facing the wider sector, and find out what competition the company has. You can also browse the company's social media channels. 
+Work this knowledge into your application form by referring to it in your personal statement or responses to questions.
+</p>
+            </blockquote>      
+          </div>
+        </div>
+      </div>
+  
+       <div class="ht-tm-codeblock">
+        <div class="ht-tm-element card bg-secondary text-success mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+                  <h2 class="featurette-heading">Include relevant skills and experience<span class="text-muted"></span></h2>
+           <p>One section of the application form will typically ask you to list your entire academic and employment history. But when it comes to answering competency-based questions or writing a personal statement, it's up to you to pick and choose what to include.
+It's vital that you read the job description and person specification carefully - it will outline exactly what skills and experience the employer is looking for and you should emphasise these in your application form. Give specific examples demonstrating when you have gained the experience or used the skill. Avoid being vague and don't waste space writing about skills you have that aren't relevant to the job.
+</p>
+            </blockquote>      
+          </div>
+        </div>
+     </div>
+      
+      <div class="ht-tm-codeblock">
+        <div class="ht-tm-element card bg-secondary text-success mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+                   <h2 class="featurette-heading">Show your personality<span class="text-muted"></span></h2>
+             <p>Application forms can be dry documents and it's difficult to give an idea of what you're like as a person via an online form. Try to inject some personality into your answers.
+Don't talk exclusively about your academic and employment history - find ways to include information about your other interests. For example, refer to extra-curricular activities that have helped you to gain the necessary skills for the job, and show that you can get along with a variety of different people.
+</p>
+            </blockquote>      
+          </div>
+        </div>
+      </div>
+  
+       <div class="ht-tm-codeblock">
+        <div class="ht-tm-element card bg-secondary text-success mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+                  <h2 class="featurette-heading">Sell your achievements<span class="text-muted"></span></h2>
+           <p>In most cases your application form is the first chance potential employers have to get to know you, so don't miss the opportunity to sell yourself. This isn't the time to be too modest about your achievements. Include anything you feel is relevant to the role and makes you the right candidate for the job.
+Talk about your passion for the role or the sector the organisation works in. Discuss the skills and experience you've gained during your degree, on internships and placements, in your part-time job, while doing voluntary work, at your university club or society, or while on a gap year. If you can relate it to the job requirements, then it's worth mentioning.
+</p>
+            </blockquote>      
+          </div>
+        </div>
+     </div>
+     
+     <div class="ht-tm-codeblock">
+        <div class="ht-tm-element card bg-secondary text-success mb-3 text-center">
+          <div class="card-body">
+            <blockquote class="card-blockquote">
+                  <h2 class="featurette-heading">Be convincing<span class="text-muted"></span></h2>
+           <p>You need to come across as confident, so ensure that your answers are positive. For example, don't waffle as this may indicate that you're trying to cover up the fact that you lack a particular skill the employer is looking for. Instead, keep your answers short and to the point, explaining clearly how you meet the requirements of the role. </p>
+            </blockquote>      
+          </div>
+        </div>
+     </div>
+     
+     <p class="pull-right"><a href="#">Back to top</a></p>      
+     <!-- Tips and Tricks -->
+       <hr class="featurette-divider">
+       <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="jumbotron" id="tips" >
+               <h1>Tips to getting a job <span class="text-muted"></span></h1>
+               <p>It's important for your job applications to be complete, correct (no errors) and accurate. Here is the information you will need to complete an application for employment and tips and suggestions for writing applications that make a great impression.</p>
+             </div>
+    </div>
+  </div>
+     </div>
+
+     <div class="col-md-6">
+   <h3>Dos for interviews</h3>
+         <ul class="list-group checked-list-box">
+                  <li class="list-group-item" data-style="button" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Remember the names of the hiring team<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="success" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Arrive a few minutes early<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="info" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Ask for clarification if you don’t understand a question<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="warning" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Answer the questions you’re asked as best you can<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="danger" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Pause if you need time to think<input type="checkbox" class="hidden"></li>
+      <li class="list-group-item" data-style="button" data-color="danger" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Email ASAP to addresses specific and relevant issues from the interview<input type="checkbox" class="hidden"></li>   
+          </ul>
+      </div>  
+      <div class="col-md-6">
+    <h3>Don'ts for interviews</h3>
+          <ul class="list-group checked-list-box">
+                  <li class="list-group-item" data-style="button" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-remove"></span> DON’T assume the hiring team remembers your resume<input type="checkbox" class="hidden" ></li>
+                  <li class="list-group-item" data-style="button" data-color="success" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-remove"></span> DON’T talk incessantly<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="info" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-remove"></span> DON’T discuss salary and benefits if you can avoid it (till you get the job offer)<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="warning" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-remove"></span> DON’T beg for the job<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="danger" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-remove"></span> DON’T dress or behave too casually<input type="checkbox" class="hidden"></li>
+      <li class="list-group-item" data-style="button" data-color="danger" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-remove"></span> DON’T wear strong scents<input type="checkbox" class="hidden"></li>   
+          </ul>
+      </div>  
+      <div class="col-md-12">
+    <h3>Resume Guidelines</h3>
+          <ul class="list-group checked-list-box">
+                  <li class="list-group-item" data-style="button" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Your resume should be as concise as possible; two pages is the maximum length, but one page is preferable. Here's more about resume length and how long your resume should be. If you need to get your resume on a single page, here's how to tighten it up and gain extra space.<input type="checkbox" class="hidden" ></li>
+                  <li class="list-group-item" data-style="button" data-color="success" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Do not use ornate fonts that are difficult to read. Times New Roman, Arial, Calibri, or a similar font is best. Your font size should be between 10 and 12 points although your name and the section headings can be a little larger and/or bold. Here's how to select a font for your resume.<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="info" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> The standard page margins in word processing programs (1" margins on the top, bottom and left and right sides of the page) work for most resumes. However, if you need to tighten the margins to reduce the length of your resume, it's fine to reduce the margins to a 1/2" on the sides and top and bottom.<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="warning" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> However you decide to organize the sections of your resume, be sure to keep each section uniform. For example, if you put the name of one company in italics, every company name must be in italics. If you bold one job title, bold them all.<input type="checkbox" class="hidden"></li>
+                  <li class="list-group-item" data-style="button" data-color="danger" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Information to Avoid: Do not include personal information such as birthday, height, weight, marital status, children, etc., unless the position requires it.<input type="checkbox" class="hidden"></li>
+      <li class="list-group-item" data-style="button" data-color="danger" style="cursor: pointer;"><span class="state-icon glyphicon glyphicon-check"></span> Be sure to edit your resume before sending it. Check spelling, grammar, tenses, names of companies and people, etc. Have a friend or career services counselor check over your resume as well. Use this proofreading checklist to make sure your resume is perfect.<input type="checkbox" class="hidden"></li>   
+          </ul>
+      </div>  
+      
+      <hr class="featurette-divider">
+    
+      
+      <!-- /END THE FEATURETTES -->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2017 Ayush, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body> 
+</html>
