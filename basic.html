@@ -1,38 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="shortcut icon" href="IRC.png" type="image/png" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>Signup Page </title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-   <link href="SignUp.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-</html>
+.back
+.registration-form
+  header
+    h1 Sign Up
+    p Fill in all informations
+  form
+    .input-section.email-section
+      input(type="email" placeholder="ENTER YOUR E-MAIL HERE" autocomplete="off").email
+      .animated-button
+        span.icon-paper-plane
+          i.fa.fa-envelope-o
+        span.next-button.email
+          i.fa.fa-arrow-up
+    .input-section.password-section.folded
+      input(type="password" placeholder="ENTER YOUR PASSWORD HERE").password
+      .animated-button
+        span.icon-lock
+          i.fa.fa-lock
+        span.next-button.password
+          i.fa.fa-arrow-up
+    .input-section.repeat-password-section.folded
+      input(type="password" placeholder="REPEAT YOUR PASSWORD HERE").repeat-password
+      .animated-button
+        span.icon-repeat-lock
+          i.fa.fa-lock
+        span.next-button.repeat-password
+          i.fa.fa-paper-plane
+    .success 
+      p ACCOUNT CREATED
