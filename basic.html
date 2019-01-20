@@ -1,38 +1,32 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <link href="SignUp.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<div class="col-md-4 col-md-offset-4" id="login">
-						<section id="inner-wrapper" class="login">
-							<article>
-								<form>
-									<div class="form-group">
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-user"> </i></span>
-											<input type="text" class="form-control" placeholder="Name">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
-											<input type="email" class="form-control" placeholder="Email Address">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-key"> </i></span>
-											<input type="password" class="form-control" placeholder="Password">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="input-group">
-											<span class="input-group-addon"><i class="fa fa-key"> </i></span>
-											<input type="password" class="form-control" placeholder="Confirm Password">
-										</div>
-									</div>
-									  <button type="submit" class="btn btn-success btn-block">Submit</button>
-								</form>
-							</article>
-						</section></div>
+<form>
+  <input id="input-1" type="text" placeholder="John Doe" required autofocus />
+  <label for="input-1">
+    <span class="label-text">Full Name</span>
+    <span class="nav-dot"></span>
+    <div class="signup-button-trigger">Sign Up</div>
+  </label>
+  <input id="input-2" type="text" placeholder="john" required />
+  <label for="input-2">
+    <span class="label-text">Username</span>
+    <span class="nav-dot"></span>
+  </label>
+  <input id="input-3" type="email" placeholder="email@address.com" required />
+  <label for="input-3">
+    <span class="label-text">Email</span>
+    <span class="nav-dot"></span>
+  </label>
+  <input id="input-4" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+  <label for="input-4">
+    <span class="label-text">Password</span>
+    <span class="nav-dot"></span>
+  </label>
+  <input id="input-5" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
+  <label for="input-5">
+    <span class="label-text">Confirm Password</span>
+    <span class="nav-dot"></span>
+  </label>
+  <button type="submit">Create Your Account</button>
+  <p class="tip">Press Tab</p>
+  <div class="signup-button">Sign Up</div>
+</form>
