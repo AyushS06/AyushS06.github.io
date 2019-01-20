@@ -1,41 +1,20 @@
 <link href="SignUp.css" rel="stylesheet" id="bootstrap-css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
 <title> Sign Ups </title>
-   <div class="container">
-  <div class="navigation">
-    <ol>
-      <li><a href="#" data-ref="name">Name</a></li>
-      <li><a href="#" data-ref="uname">Username</a></li>
-      <li><a href="#" data-ref="email">Email</a></li>
-      <li><a href="#" data-ref="viewpswd">Password</a></li>
-      <li><a href="#" data-ref="phone">Phone</a></li>
-    </ol>
+<div class='login'>
+  <h2>Register</h2>
+  <input name='username' placeholder='Username' type='text'>
+  <input id='pw' name='password' placeholder='Password' type='password'>
+  <input name='email' placeholder='E-Mail Address' type='text'>
+  <div class='agree'>
+    <input id='agree' name='agree' type='checkbox'>
+    <label for='agree'></label>Accept rules and conditions
   </div>
-  <form id="sign-form" class="sign-form">
-    <ol class="questions">
-      <li>
-        <span><label for="name">Hi, What is your Name?</label></span>
-        <input class="active" id="name" name="name" type="text" placeholder="Enter your full name" autofocus/>
-      </li>
-      <li>
-        <span><label for="uname">& what shall we call you?</label></span>
-        <input id="uname" name="username" type="text" placeholder="Enter a username" autofocus/>
-      </li>
-      <li>
-        <span><label for="email">Enter you email</label></span>
-        <input id="email" name="email" type="text" placeholder="Email" autofocus/>
-      </li>
-      <li>
-        <span><label for="password">Choose a password</label></span>
-        <input id="viewpswd" name="password" type="text" placeholder="this your password" />
-        <input id="password" name="password" type="password" placeholder="make sure you dont forget" autofocus/>
-        <span id="show-pwd" class="view"></span>
-      </li>
-      <li>
-        <span><label for="phone">Enter your phone number</label></span>
-        <select name="countryCode" class="country">
-                                <option data-countryCode="GB" value="91">(+91) INDIA </option>
-                                <option data-countryCode="GB" value="44">(+44) UK </option>
-                                <option data-countryCode="US" value="1">(+1) USA </option>
+  <input class='animated' type='submit' value='Register'>
+  <a class='forgot' href='#'>Already have an account?</a>
+</div>
+<option data-countryCode="US" value="1">(+1) USA </option>
                                 <optgroup label="Other countries">
                                    <option data-countryCode="DZ" value="213"> (+213)Algeria</option>
                                    <option data-countryCode="AD" value="376"> (+376) Andorra</option>
