@@ -5,7 +5,7 @@ function edit_row(no)
 	
  var name=document.getElementById("name_row"+no);
  var country=document.getElementById("country_row"+no);
- var age=document.getElementById("age_row"+no);
+ var age=document.getElementById("age_row"+no); 
 	
  var name_data=name.innerHTML;
  var country_data=country.innerHTML;
